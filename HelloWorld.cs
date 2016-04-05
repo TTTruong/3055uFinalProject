@@ -1,7 +1,5 @@
-public class Hello1
-{
-   public static void Main()
-   {
+public class HelloWorld {
+   public static void Main() {
       System.Console.WriteLine("Hello, World!");
    }
 }
