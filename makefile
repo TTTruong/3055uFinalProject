@@ -1,20 +1,20 @@
 all:
 	@echo "\n===== Creating executables. ====="
-	mcs *.cs
+	gmcs -r:System.Windows.Forms.dll -r:System.Drawing.dll GUI.cs
 	@echo "\n===== Running executables. ====="
-	mono *.exe
+	mono GUI.exe
 	@echo "\n===== Cleaning executables. ====="
 	rm *.exe
 	@echo ""
 
 prepare:
 	@echo "\n===== Creating executables. ====="
-	mcs *.cs
+	gmcs -r:System.Windows.Forms.dll -r:System.Drawing.dll GUI.cs
 	@echo ""
 
 run:
 	@echo "\n===== Running executables. ====="
-	mono *.exe
+	mono GUI.exe
 	@echo ""
 
 clean:

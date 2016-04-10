@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 public class Exploring {
@@ -10,6 +11,8 @@ public class Exploring {
       return integerList;
    }
 
+   // Special for C# : LINQ's and delegates.
+
    public static void Main() {
 
       List<int> integers = new List<int>();
@@ -19,8 +22,8 @@ public class Exploring {
    	int last = integers[integers.Count-1];
    	int numCount = integers.Count;
 
-      System.Console.WriteLine("First list value:  " + first);
-      System.Console.WriteLine("Last list value: " + last);
-      System.Console.WriteLine("Number in list: " + numCount);
+      Console.WriteLine("First list value:  " + first);
+      Console.WriteLine("Last list value: " + last);
+      Console.WriteLine("Number in list: " + numCount);
    }
 }
