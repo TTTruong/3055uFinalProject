@@ -1,15 +1,16 @@
+NAMESPACES = -r:System.Windows.Forms.dll -r:System.Drawing.dll -r:System.Data.dll
 all:
 	@echo "\n===== Creating executables. ====="
-	gmcs -r:System.Windows.Forms.dll -r:System.Drawing.dll GUI.cs
+	gmcs $(NAMESPACES) *.cs
 	@echo "\n===== Running executables. ====="
-	mono GUI.exe
+	mono *.exe
 	@echo "\n===== Cleaning executables. ====="
 	rm *.exe
 	@echo ""
 
 prepare:
 	@echo "\n===== Creating executables. ====="
-	gmcs -r:System.Windows.Forms.dll -r:System.Drawing.dll GUI.cs
+	gmcs $(NAMESPACES) *.cs
 	@echo ""
 
 run:
