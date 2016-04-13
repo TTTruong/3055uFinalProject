@@ -191,6 +191,7 @@
 			this.multiplyButton.TabIndex = 16;
 			this.multiplyButton.Text = "x";
 			this.multiplyButton.UseVisualStyleBackColor = true;
+			this.multiplyButton.Click += new System.EventHandler(this.multiplyButton_Click);
 			
 			// divideButton
 			this.divideButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -200,6 +201,7 @@
 			this.divideButton.TabIndex = 17;
 			this.divideButton.Text = "÷";
 			this.divideButton.UseVisualStyleBackColor = true;
+			this.divideButton.Click += new System.EventHandler(this.divideButton_Click);
 			
 			// clearButton
 			this.clearButton.BackColor = System.Drawing.Color.Transparent;
@@ -238,7 +240,7 @@
 			this.wolframButton.TabIndex = 21;
 			this.wolframButton.Text = "Wolfram Alpha";
 			this.wolframButton.UseVisualStyleBackColor = true;
-			this.wolframButton.Click += new System.EventHandler(this.button20_Click);
+			this.wolframButton.Click += new System.EventHandler(this.wolframButton_Click);
 			
 			// leftPButton
 			this.leftPButton.Location = new System.Drawing.Point(12, 110);

@@ -93,7 +93,23 @@ namespace WindowsFormsApplication {
 			}
 		}
 
-		private void button20_Click(object sender, EventArgs e) {
+		private void multiplyButton_Click(object sender, EventArgs e) {
+			if (equationTextBox.Text == "") {
+				equationTextBox.Text += "0x";
+			} else {
+				equationTextBox.Text += "x";
+			}
+		}
+
+		private void divideButton_Click(object sender, EventArgs e) {
+			if (equationTextBox.Text == "") {
+				equationTextBox.Text += "0÷";
+			} else {
+				equationTextBox.Text += "÷";
+			}
+		}
+
+		private void wolframButton_Click(object sender, EventArgs e) {
 
 		}
 	}
