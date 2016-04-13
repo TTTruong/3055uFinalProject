@@ -112,5 +112,15 @@ namespace WindowsFormsApplication {
 		private void wolframButton_Click(object sender, EventArgs e) {
 
 		}
+
+		private void button_MouseEnter(object sender, EventArgs e) {
+			Button btn = sender as Button;
+    		btn.BackColor = System.Drawing.Color.Red;
+		}
+
+		private void button_MouseLeave(object sender, EventArgs e) {
+			Button btn = sender as Button;
+    		btn.BackColor = System.Drawing.Color.Silver;
+		}
 	}
 }

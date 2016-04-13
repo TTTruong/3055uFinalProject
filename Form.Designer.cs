@@ -54,6 +54,7 @@
 			this.equationTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
 
 			// oneButton
+			this.oneButton.BackColor = System.Drawing.Color.Silver;
 			this.oneButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.oneButton.Location = new System.Drawing.Point(118, 204);
 			this.oneButton.Name = "oneButton";
@@ -62,8 +63,11 @@
 			this.oneButton.Text = "1";
 			this.oneButton.UseVisualStyleBackColor = true;
 			this.oneButton.Click += new System.EventHandler(this.oneButton_Click);
+			this.oneButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.oneButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// twoButton
+			this.twoButton.BackColor = System.Drawing.Color.Silver;
 			this.twoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.twoButton.Location = new System.Drawing.Point(165, 204);
 			this.twoButton.Name = "twoButton";
@@ -72,8 +76,11 @@
 			this.twoButton.Text = "2";
 			this.twoButton.UseVisualStyleBackColor = true;
 			this.twoButton.Click += new System.EventHandler(this.twoButton_Click);
+			this.twoButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.twoButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// threeButton
+			this.threeButton.BackColor = System.Drawing.Color.Silver;
 			this.threeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.threeButton.Location = new System.Drawing.Point(210, 204);
 			this.threeButton.Name = "threeButton";
@@ -82,8 +89,11 @@
 			this.threeButton.Text = "3";
 			this.threeButton.UseVisualStyleBackColor = true;
 			this.threeButton.Click += new System.EventHandler(this.threeButton_Click);
+			this.threeButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.threeButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// fourButton
+			this.fourButton.BackColor = System.Drawing.Color.Silver;
 			this.fourButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.fourButton.Location = new System.Drawing.Point(117, 157);
 			this.fourButton.Name = "fourButton";
@@ -92,8 +102,11 @@
 			this.fourButton.Text = "4";
 			this.fourButton.UseVisualStyleBackColor = true;
 			this.fourButton.Click += new System.EventHandler(this.fourButton_Click);
+			this.fourButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.fourButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// fiveButton
+			this.fiveButton.BackColor = System.Drawing.Color.Silver;
 			this.fiveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.fiveButton.Location = new System.Drawing.Point(163, 157);
 			this.fiveButton.Name = "fiveButton";
@@ -102,8 +115,11 @@
 			this.fiveButton.Text = "5";
 			this.fiveButton.UseVisualStyleBackColor = true;
 			this.fiveButton.Click += new System.EventHandler(this.fiveButton_Click);
+			this.fiveButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.fiveButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// sixButton
+			this.sixButton.BackColor = System.Drawing.Color.Silver;
 			this.sixButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.sixButton.Location = new System.Drawing.Point(210, 157);
 			this.sixButton.Name = "sixButton";
@@ -112,8 +128,11 @@
 			this.sixButton.Text = "6";
 			this.sixButton.UseVisualStyleBackColor = true;
 			this.sixButton.Click += new System.EventHandler(this.sixButton_Click);
+			this.sixButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.sixButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// sevenButton
+			this.sevenButton.BackColor = System.Drawing.Color.Silver;
 			this.sevenButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.sevenButton.Location = new System.Drawing.Point(117, 111);
 			this.sevenButton.Name = "sevenButton";
@@ -122,8 +141,11 @@
 			this.sevenButton.Text = "7";
 			this.sevenButton.UseVisualStyleBackColor = true;
 			this.sevenButton.Click += new System.EventHandler(this.sevenButton_Click);
+			this.sevenButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.sevenButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// eightButton
+			this.eightButton.BackColor = System.Drawing.Color.Silver;
 			this.eightButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.eightButton.Location = new System.Drawing.Point(163, 110);
 			this.eightButton.Name = "eightButton";
@@ -132,8 +154,11 @@
 			this.eightButton.Text = "8";
 			this.eightButton.UseVisualStyleBackColor = true;
 			this.eightButton.Click += new System.EventHandler(this.eightButton_Click);
+			this.eightButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.eightButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// nineButton
+			this.nineButton.BackColor = System.Drawing.Color.Silver;
 			this.nineButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.nineButton.Location = new System.Drawing.Point(209, 111);
 			this.nineButton.Name = "nineButton";
@@ -142,8 +167,11 @@
 			this.nineButton.Text = "9";
 			this.nineButton.UseVisualStyleBackColor = true;
 			this.nineButton.Click += new System.EventHandler(this.nineButton_Click);
+			this.nineButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.nineButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// zeroButton
+			this.zeroButton.BackColor = System.Drawing.Color.Silver;
 			this.zeroButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.zeroButton.Location = new System.Drawing.Point(118, 250);
 			this.zeroButton.Name = "zeroButton";
@@ -152,8 +180,11 @@
 			this.zeroButton.Text = "0";
 			this.zeroButton.UseVisualStyleBackColor = true;
 			this.zeroButton.Click += new System.EventHandler(this.zeroButton_Click);
+			this.zeroButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.zeroButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// decimalButton
+			this.decimalButton.BackColor = System.Drawing.Color.Silver;
 			this.decimalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.decimalButton.Location = new System.Drawing.Point(210, 250);
 			this.decimalButton.Name = "decimalButton";
@@ -162,8 +193,11 @@
 			this.decimalButton.Text = ".";
 			this.decimalButton.UseVisualStyleBackColor = true;
 			this.decimalButton.Click += new System.EventHandler(this.decimalButton_Click);
+			this.decimalButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.decimalButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// additionButton
+			this.additionButton.BackColor = System.Drawing.Color.Silver;
 			this.additionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.additionButton.Location = new System.Drawing.Point(255, 157);
 			this.additionButton.Name = "additionButton";
@@ -172,8 +206,11 @@
 			this.additionButton.Text = "+";
 			this.additionButton.UseVisualStyleBackColor = true;
 			this.additionButton.Click += new System.EventHandler(this.additionButton_Click);
+			this.additionButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.additionButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// subtractButton
+			this.subtractButton.BackColor = System.Drawing.Color.Silver;
 			this.subtractButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.subtractButton.Location = new System.Drawing.Point(255, 111);
 			this.subtractButton.Name = "subtractButton";
@@ -182,8 +219,11 @@
 			this.subtractButton.Text = "-";
 			this.subtractButton.UseVisualStyleBackColor = true;
 			this.subtractButton.Click += new System.EventHandler(this.subtractButton_Click);
+			this.subtractButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.subtractButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// multiplyButton
+			this.multiplyButton.BackColor = System.Drawing.Color.Silver;
 			this.multiplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.multiplyButton.Location = new System.Drawing.Point(165, 64);
 			this.multiplyButton.Name = "multiplyButton";
@@ -192,8 +232,11 @@
 			this.multiplyButton.Text = "x";
 			this.multiplyButton.UseVisualStyleBackColor = true;
 			this.multiplyButton.Click += new System.EventHandler(this.multiplyButton_Click);
+			this.multiplyButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.multiplyButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// divideButton
+			this.divideButton.BackColor = System.Drawing.Color.Silver;
 			this.divideButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.divideButton.Location = new System.Drawing.Point(210, 65);
 			this.divideButton.Name = "divideButton";
@@ -202,9 +245,11 @@
 			this.divideButton.Text = "÷";
 			this.divideButton.UseVisualStyleBackColor = true;
 			this.divideButton.Click += new System.EventHandler(this.divideButton_Click);
+			this.divideButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.divideButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// clearButton
-			this.clearButton.BackColor = System.Drawing.Color.Transparent;
+			this.clearButton.BackColor = System.Drawing.Color.Silver;
 			this.clearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.clearButton.Location = new System.Drawing.Point(118, 64);
 			this.clearButton.Name = "clearButton";
@@ -213,8 +258,11 @@
 			this.clearButton.Text = "C";
 			this.clearButton.UseVisualStyleBackColor = false;
 			this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
-			
+			this.clearButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.clearButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
+
 			// backButton
+			this.backButton.BackColor = System.Drawing.Color.Silver;
 			this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.backButton.Location = new System.Drawing.Point(255, 65);
 			this.backButton.Name = "backButton";
@@ -223,8 +271,11 @@
 			this.backButton.Text = "←";
 			this.backButton.UseVisualStyleBackColor = true;
 			this.backButton.Click += new System.EventHandler(this.backButton_Click);
+			this.backButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.backButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// equalsButton
+			this.equalsButton.BackColor = System.Drawing.Color.Silver;
 			this.equalsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.equalsButton.Location = new System.Drawing.Point(255, 203);
 			this.equalsButton.Name = "equalsButton";
@@ -232,8 +283,11 @@
 			this.equalsButton.TabIndex = 20;
 			this.equalsButton.Text = "=";
 			this.equalsButton.UseVisualStyleBackColor = true;
+			this.equalsButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.equalsButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// wolframButton
+			this.wolframButton.BackColor = System.Drawing.Color.Silver;
 			this.wolframButton.Location = new System.Drawing.Point(12, 65);
 			this.wolframButton.Name = "wolframButton";
 			this.wolframButton.Size = new System.Drawing.Size(85, 39);
@@ -241,70 +295,96 @@
 			this.wolframButton.Text = "Wolfram Alpha";
 			this.wolframButton.UseVisualStyleBackColor = true;
 			this.wolframButton.Click += new System.EventHandler(this.wolframButton_Click);
+			this.wolframButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.wolframButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// leftPButton
+			this.leftPButton.BackColor = System.Drawing.Color.Silver;
 			this.leftPButton.Location = new System.Drawing.Point(12, 110);
 			this.leftPButton.Name = "leftPButton";
 			this.leftPButton.Size = new System.Drawing.Size(40, 40);
 			this.leftPButton.TabIndex = 22;
 			this.leftPButton.Text = "(";
 			this.leftPButton.UseVisualStyleBackColor = true;
+			this.leftPButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.leftPButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// rightPButton
+			this.rightPButton.BackColor = System.Drawing.Color.Silver;
 			this.rightPButton.Location = new System.Drawing.Point(57, 111);
 			this.rightPButton.Name = "rightPButton";
 			this.rightPButton.Size = new System.Drawing.Size(40, 40);
 			this.rightPButton.TabIndex = 23;
 			this.rightPButton.Text = ")";
 			this.rightPButton.UseVisualStyleBackColor = true;
+			this.rightPButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.rightPButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// squaredButton
+			this.squaredButton.BackColor = System.Drawing.Color.Silver;
 			this.squaredButton.Location = new System.Drawing.Point(12, 156);
 			this.squaredButton.Name = "squaredButton";
 			this.squaredButton.Size = new System.Drawing.Size(40, 40);
 			this.squaredButton.TabIndex = 24;
 			this.squaredButton.Text = "x^2";
 			this.squaredButton.UseVisualStyleBackColor = true;
+			this.squaredButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.squaredButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// cubedButton
+			this.cubedButton.BackColor = System.Drawing.Color.Silver;
 			this.cubedButton.Location = new System.Drawing.Point(57, 156);
 			this.cubedButton.Name = "cubedButton";
 			this.cubedButton.Size = new System.Drawing.Size(40, 40);
 			this.cubedButton.TabIndex = 25;
 			this.cubedButton.Text = "x^3";
 			this.cubedButton.UseVisualStyleBackColor = true;
+			this.cubedButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.cubedButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// factorialButton
+			this.factorialButton.BackColor = System.Drawing.Color.Silver;
 			this.factorialButton.Location = new System.Drawing.Point(12, 251);
 			this.factorialButton.Name = "factorialButton";
 			this.factorialButton.Size = new System.Drawing.Size(40, 40);
 			this.factorialButton.TabIndex = 26;
 			this.factorialButton.Text = "n!";
 			this.factorialButton.UseVisualStyleBackColor = true;
+			this.factorialButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.factorialButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// squaredRootButton
+			this.squaredRootButton.BackColor = System.Drawing.Color.Silver;
 			this.squaredRootButton.Location = new System.Drawing.Point(58, 202);
 			this.squaredRootButton.Name = "squaredRootButton";
 			this.squaredRootButton.Size = new System.Drawing.Size(40, 40);
 			this.squaredRootButton.TabIndex = 27;
 			this.squaredRootButton.Text = "√";
 			this.squaredRootButton.UseVisualStyleBackColor = true;
+			this.squaredRootButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.squaredRootButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// logButton
+			this.logButton.BackColor = System.Drawing.Color.Silver;
 			this.logButton.Location = new System.Drawing.Point(57, 251);
 			this.logButton.Name = "logButton";
 			this.logButton.Size = new System.Drawing.Size(40, 40);
 			this.logButton.TabIndex = 28;
 			this.logButton.Text = "log";
 			this.logButton.UseVisualStyleBackColor = true;
+			this.logButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.logButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// powerButton
+			this.powerButton.BackColor = System.Drawing.Color.Silver;
 			this.powerButton.Location = new System.Drawing.Point(13, 202);
 			this.powerButton.Name = "powerButton";
 			this.powerButton.Size = new System.Drawing.Size(40, 40);
 			this.powerButton.TabIndex = 29;
 			this.powerButton.Text = "x^y";
 			this.powerButton.UseVisualStyleBackColor = true;
+			this.powerButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.powerButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// Calculator
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
