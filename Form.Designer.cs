@@ -171,6 +171,7 @@
 			this.additionButton.TabIndex = 14;
 			this.additionButton.Text = "+";
 			this.additionButton.UseVisualStyleBackColor = true;
+			this.additionButton.Click += new System.EventHandler(this.additionButton_Click);
 			
 			// subtractButton
 			this.subtractButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -180,6 +181,7 @@
 			this.subtractButton.TabIndex = 15;
 			this.subtractButton.Text = "-";
 			this.subtractButton.UseVisualStyleBackColor = true;
+			this.subtractButton.Click += new System.EventHandler(this.subtractButton_Click);
 			
 			// multiplyButton
 			this.multiplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

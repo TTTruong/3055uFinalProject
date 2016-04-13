@@ -72,7 +72,25 @@ namespace WindowsFormsApplication {
 		}
 
 		private void backButton_Click(object sender, EventArgs e) {
-			equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
+			if (equationTextBox.Text != "") {
+				equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
+			}
+		}
+
+		private void additionButton_Click(object sender, EventArgs e) {
+			if (equationTextBox.Text == "") {
+				equationTextBox.Text += "0+";
+			} else {
+				equationTextBox.Text += "+";
+			}
+		}
+
+		private void subtractButton_Click(object sender, EventArgs e) {
+			if (equationTextBox.Text == "") {
+				equationTextBox.Text += "0-";
+			} else {
+				equationTextBox.Text += "-";
+			}
 		}
 
 		private void button20_Click(object sender, EventArgs e) {
