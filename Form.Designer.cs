@@ -14,6 +14,7 @@
 		#region Windows Form Designer generated code
 
 		private void InitializeComponent() {
+			
 			this.equationTextBox = new System.Windows.Forms.TextBox();
 			this.oneButton = new System.Windows.Forms.Button();
 			this.twoButton = new System.Windows.Forms.Button();
