@@ -52,6 +52,7 @@
 			this.equationTextBox.TabIndex = 1;
 			this.equationTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.equationTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+			this.equationTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
 
 			// oneButton
 			this.oneButton.BackColor = System.Drawing.Color.Silver;
@@ -270,7 +271,7 @@
 			this.backButton.TabIndex = 19;
 			this.backButton.Text = "←";
 			this.backButton.UseVisualStyleBackColor = true;
-			this.backButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.backButton_MouseClick);
+			this.backButton.Click += new System.EventHandler(this.backButton_Click);
 			this.backButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.backButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
@@ -283,6 +284,7 @@
 			this.equalsButton.TabIndex = 20;
 			this.equalsButton.Text = "=";
 			this.equalsButton.UseVisualStyleBackColor = true;
+			this.equalsButton.Click += new System.EventHandler(this.equalsButton_Click);
 			this.equalsButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.equalsButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
@@ -421,7 +423,8 @@
 			this.Controls.Add(this.equationTextBox);
 			this.Name = "Calculator";
 			this.Text = "Calculator";
-			this.Load += new System.EventHandler(this.Form1_Load);
+			this.AcceptButton = this.equalsButton;
+			this.Load += new System.EventHandler(this.Calculator_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

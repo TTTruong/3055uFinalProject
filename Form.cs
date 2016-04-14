@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace WindowsFormsApplication {
 
@@ -15,7 +16,7 @@ namespace WindowsFormsApplication {
 			InitializeComponent();
 		}
 
-		private void Form1_Load(object sender, EventArgs e) {
+		private void Calculator_Load(object sender, EventArgs e) {
 
 		}
 
@@ -64,14 +65,28 @@ namespace WindowsFormsApplication {
 		}
 
 		private void textBox1_TextChanged(object sender, EventArgs e) {
+			
+		}
 
+		private void textBox1_KeyPress(object sender, KeyPressEventArgs e) {
+     		if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), "[\\d+()\\-+x/.]+")) {
+          		e.Handled = true;
+     		} else if (e.KeyChar == 13) {
+     			equalsButton.PerformClick();
+ 			} else if (e.KeyChar == 8) {
+ 				backButton.PerformClick();
+ 			}
 		}
 
 		private void clearButton_MouseClick(object sender, MouseEventArgs e) {
 			equationTextBox.Text = "";
 		}
 
-		private void backButton_MouseClick(object sender, MouseEventArgs e) {
+		private void equalsButton_Click(object sender, EventArgs e) {
+			equationTextBox.Text = "equals";
+		}
+
+		private void backButton_Click(object sender, EventArgs e) {
 			if (equationTextBox.Text != "") {
 				equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
 			}
@@ -103,9 +118,9 @@ namespace WindowsFormsApplication {
 
 		private void divideButton_MouseClick(object sender, MouseEventArgs e) {
 			if (equationTextBox.Text == "") {
-				equationTextBox.Text += "0÷";
+				equationTextBox.Text += "0/";
 			} else {
-				equationTextBox.Text += "÷";
+				equationTextBox.Text += "/";
 			}
 		}
 
