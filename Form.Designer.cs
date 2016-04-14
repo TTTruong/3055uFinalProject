@@ -62,7 +62,7 @@
 			this.oneButton.TabIndex = 2;
 			this.oneButton.Text = "1";
 			this.oneButton.UseVisualStyleBackColor = true;
-			this.oneButton.Click += new System.EventHandler(this.oneButton_Click);
+			this.oneButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.oneButton_MouseClick);
 			this.oneButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.oneButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
@@ -75,7 +75,7 @@
 			this.twoButton.TabIndex = 3;
 			this.twoButton.Text = "2";
 			this.twoButton.UseVisualStyleBackColor = true;
-			this.twoButton.Click += new System.EventHandler(this.twoButton_Click);
+			this.twoButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.twoButton_MouseClick);
 			this.twoButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.twoButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
@@ -88,7 +88,7 @@
 			this.threeButton.TabIndex = 4;
 			this.threeButton.Text = "3";
 			this.threeButton.UseVisualStyleBackColor = true;
-			this.threeButton.Click += new System.EventHandler(this.threeButton_Click);
+			this.threeButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.threeButton_MouseClick);
 			this.threeButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.threeButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
@@ -101,7 +101,7 @@
 			this.fourButton.TabIndex = 5;
 			this.fourButton.Text = "4";
 			this.fourButton.UseVisualStyleBackColor = true;
-			this.fourButton.Click += new System.EventHandler(this.fourButton_Click);
+			this.fourButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.fourButton_MouseClick);
 			this.fourButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.fourButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
@@ -114,7 +114,7 @@
 			this.fiveButton.TabIndex = 6;
 			this.fiveButton.Text = "5";
 			this.fiveButton.UseVisualStyleBackColor = true;
-			this.fiveButton.Click += new System.EventHandler(this.fiveButton_Click);
+			this.fiveButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.fiveButton_MouseClick);
 			this.fiveButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.fiveButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
@@ -127,7 +127,7 @@
 			this.sixButton.TabIndex = 7;
 			this.sixButton.Text = "6";
 			this.sixButton.UseVisualStyleBackColor = true;
-			this.sixButton.Click += new System.EventHandler(this.sixButton_Click);
+			this.sixButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.sixButton_MouseClick);
 			this.sixButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.sixButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
@@ -140,7 +140,7 @@
 			this.sevenButton.TabIndex = 8;
 			this.sevenButton.Text = "7";
 			this.sevenButton.UseVisualStyleBackColor = true;
-			this.sevenButton.Click += new System.EventHandler(this.sevenButton_Click);
+			this.sevenButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.sevenButton_MouseClick);
 			this.sevenButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.sevenButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
@@ -153,7 +153,7 @@
 			this.eightButton.TabIndex = 9;
 			this.eightButton.Text = "8";
 			this.eightButton.UseVisualStyleBackColor = true;
-			this.eightButton.Click += new System.EventHandler(this.eightButton_Click);
+			this.eightButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.eightButton_MouseClick);
 			this.eightButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.eightButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
@@ -166,7 +166,7 @@
 			this.nineButton.TabIndex = 10;
 			this.nineButton.Text = "9";
 			this.nineButton.UseVisualStyleBackColor = true;
-			this.nineButton.Click += new System.EventHandler(this.nineButton_Click);
+			this.nineButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.nineButton_MouseClick);
 			this.nineButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.nineButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
@@ -179,7 +179,7 @@
 			this.zeroButton.TabIndex = 11;
 			this.zeroButton.Text = "0";
 			this.zeroButton.UseVisualStyleBackColor = true;
-			this.zeroButton.Click += new System.EventHandler(this.zeroButton_Click);
+			this.zeroButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.zeroButton_MouseClick);
 			this.zeroButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.zeroButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
@@ -192,7 +192,7 @@
 			this.decimalButton.TabIndex = 12;
 			this.decimalButton.Text = ".";
 			this.decimalButton.UseVisualStyleBackColor = true;
-			this.decimalButton.Click += new System.EventHandler(this.decimalButton_Click);
+			this.decimalButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.decimalButton_MouseClick);
 			this.decimalButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.decimalButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
@@ -205,7 +205,7 @@
 			this.additionButton.TabIndex = 14;
 			this.additionButton.Text = "+";
 			this.additionButton.UseVisualStyleBackColor = true;
-			this.additionButton.Click += new System.EventHandler(this.additionButton_Click);
+			this.additionButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.additionButton_MouseClick);
 			this.additionButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.additionButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
@@ -218,7 +218,7 @@
 			this.subtractButton.TabIndex = 15;
 			this.subtractButton.Text = "-";
 			this.subtractButton.UseVisualStyleBackColor = true;
-			this.subtractButton.Click += new System.EventHandler(this.subtractButton_Click);
+			this.subtractButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.subtractButton_MouseClick);
 			this.subtractButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.subtractButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
@@ -231,7 +231,7 @@
 			this.multiplyButton.TabIndex = 16;
 			this.multiplyButton.Text = "x";
 			this.multiplyButton.UseVisualStyleBackColor = true;
-			this.multiplyButton.Click += new System.EventHandler(this.multiplyButton_Click);
+			this.multiplyButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.multiplyButton_MouseClick);
 			this.multiplyButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.multiplyButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
@@ -244,7 +244,7 @@
 			this.divideButton.TabIndex = 17;
 			this.divideButton.Text = "÷";
 			this.divideButton.UseVisualStyleBackColor = true;
-			this.divideButton.Click += new System.EventHandler(this.divideButton_Click);
+			this.divideButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.divideButton_MouseClick);
 			this.divideButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.divideButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
@@ -257,7 +257,7 @@
 			this.clearButton.TabIndex = 18;
 			this.clearButton.Text = "C";
 			this.clearButton.UseVisualStyleBackColor = false;
-			this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+			this.clearButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.clearButton_MouseClick);
 			this.clearButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.clearButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 
@@ -270,7 +270,7 @@
 			this.backButton.TabIndex = 19;
 			this.backButton.Text = "←";
 			this.backButton.UseVisualStyleBackColor = true;
-			this.backButton.Click += new System.EventHandler(this.backButton_Click);
+			this.backButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.backButton_MouseClick);
 			this.backButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.backButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
@@ -294,7 +294,7 @@
 			this.wolframButton.TabIndex = 21;
 			this.wolframButton.Text = "Wolfram Alpha";
 			this.wolframButton.UseVisualStyleBackColor = true;
-			this.wolframButton.Click += new System.EventHandler(this.wolframButton_Click);
+			this.wolframButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.wolframButton_MouseClick);
 			this.wolframButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.wolframButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
