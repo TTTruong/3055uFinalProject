@@ -13,10 +13,12 @@ namespace WindowsFormsApplication {
 	public partial class Calculator : Form {
 
 		bool recEquals;
+		bool recOp;
 
 		public Calculator() {
 			InitializeComponent();
 			recEquals = false;
+			recOp = false;
 		}
 
 		private void Calculator_Load(object sender, EventArgs e) {
@@ -30,6 +32,7 @@ namespace WindowsFormsApplication {
 			} else {
 				equationTextBox.Text += "0";
 			}
+			recOp = false;
 		}
 
 		private void oneButton_MouseClick(object sender, MouseEventArgs e) {
@@ -39,6 +42,7 @@ namespace WindowsFormsApplication {
 			} else {
 				equationTextBox.Text += "1";
 			}
+			recOp = false;
 		}
 
 		private void twoButton_MouseClick(object sender, MouseEventArgs e) {
@@ -48,6 +52,7 @@ namespace WindowsFormsApplication {
 			} else {
 				equationTextBox.Text += "2";
 			}
+			recOp = false;
 		}
 
 		private void threeButton_MouseClick(object sender, MouseEventArgs e) {
@@ -57,6 +62,7 @@ namespace WindowsFormsApplication {
 			} else {
 				equationTextBox.Text += "3";
 			}
+			recOp = false;
 		}
 
 		private void fourButton_MouseClick(object sender, MouseEventArgs e) {
@@ -66,6 +72,7 @@ namespace WindowsFormsApplication {
 			} else {
 				equationTextBox.Text += "4";
 			}
+			recOp = false;
 		}
 
 		private void fiveButton_MouseClick(object sender, MouseEventArgs e) {
@@ -75,6 +82,7 @@ namespace WindowsFormsApplication {
 			} else {
 				equationTextBox.Text += "5";
 			}
+			recOp = false;
 		}
 
 		private void sixButton_MouseClick(object sender, MouseEventArgs e) {
@@ -84,6 +92,7 @@ namespace WindowsFormsApplication {
 			} else {
 				equationTextBox.Text += "6";
 			}
+			recOp = false;
 		}
 
 		private void sevenButton_MouseClick(object sender, MouseEventArgs e) {
@@ -93,6 +102,7 @@ namespace WindowsFormsApplication {
 			} else {
 				equationTextBox.Text += "7";
 			}
+			recOp = false;
 		}
 
 		private void eightButton_MouseClick(object sender, MouseEventArgs e) {
@@ -102,6 +112,7 @@ namespace WindowsFormsApplication {
 			} else {
 				equationTextBox.Text += "8";
 			}
+			recOp = false;
 		}
 
 		private void nineButton_MouseClick(object sender, MouseEventArgs e) {
@@ -111,6 +122,7 @@ namespace WindowsFormsApplication {
 			} else {
 				equationTextBox.Text += "9";
 			}
+			recOp = false;
 		}
 
 		private void decimalButton_MouseClick(object sender, MouseEventArgs e) {
@@ -124,6 +136,7 @@ namespace WindowsFormsApplication {
 					equationTextBox.Text += ".";
 				}
 			}
+			recOp = false;
 		}
 
 		private void textBox1_TextChanged(object sender, EventArgs e) {
@@ -138,16 +151,27 @@ namespace WindowsFormsApplication {
 
 		private void clearButton_MouseClick(object sender, MouseEventArgs e) {
 			equationTextBox.Text = "";
+			recEquals = false;
+			recOp = false;
 		}
 
 		private void equalsButton_Click(object sender, EventArgs e) {
 			equationTextBox.Text = "equals";
 			recEquals = true;
+			recOp = false;
 		}
 
 		private void backButton_MouseClick(object sender, MouseEventArgs e) {
 			if (equationTextBox.Text != "") {
 				equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
+
+				if (equationTextBox.Text != "") {
+					if (!System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/x]+")) {
+	          			recOp = true;
+     				} else {
+     					recOp = false;
+     				}
+     			}
 			}
 		}
 
@@ -155,36 +179,52 @@ namespace WindowsFormsApplication {
 			if (equationTextBox.Text == "") {
 				equationTextBox.Text += "0+";
 			} else {
+				if (recOp) {
+					equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
+				}
 				equationTextBox.Text += "+";
 			}
 			recEquals = false;
+			recOp = true;
 		}
 
 		private void subtractButton_MouseClick(object sender, MouseEventArgs e) {
 			if (equationTextBox.Text == "") {
 				equationTextBox.Text += "0-";
 			} else {
+				if (recOp) {
+					equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
+				}
 				equationTextBox.Text += "-";
 			}
 			recEquals = false;
+			recOp = true;
 		}
 
 		private void multiplyButton_MouseClick(object sender, MouseEventArgs e) {
 			if (equationTextBox.Text == "") {
 				equationTextBox.Text += "0x";
 			} else {
+				if (recOp) {
+					equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
+				}
 				equationTextBox.Text += "x";
 			}
 			recEquals = false;
+			recOp = true;
 		}
 
 		private void divideButton_MouseClick(object sender, MouseEventArgs e) {
 			if (equationTextBox.Text == "") {
 				equationTextBox.Text += "0/";
 			} else {
+				if (recOp) {
+					equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
+				}
 				equationTextBox.Text += "/";
 			}
 			recEquals = false;
+			recOp = true;
 		}
 
 		private void wolframButton_MouseClick(object sender, MouseEventArgs e) {
@@ -204,11 +244,13 @@ namespace WindowsFormsApplication {
 		private void leftPButton_MouseClick(object sender, MouseEventArgs e) {
 			equationTextBox.Text += "(";
 			recEquals = false;
+			recOp = false;
 		}
 
 		private void rightPButton_MouseClick(object sender, MouseEventArgs e) {
 			equationTextBox.Text += ")";
 			recEquals = false;
+			recOp = false;
 		}
 
 		private void squaredButton_MouseClick(object sender, MouseEventArgs e) {
@@ -218,6 +260,7 @@ namespace WindowsFormsApplication {
 				equationTextBox.Text += "^2";
 			}
 			recEquals = false;
+			recOp = false;
 		}
 
 		private void cubedButton_MouseClick(object sender, MouseEventArgs e) {
@@ -227,15 +270,20 @@ namespace WindowsFormsApplication {
 				equationTextBox.Text += "^3";
 			}
 			recEquals = false;
+			recOp = false;
 		}
 
 		private void powerButton_MouseClick(object sender, MouseEventArgs e) {
 			if (equationTextBox.Text == "") {
 				equationTextBox.Text += "0^";
 			} else {
+				if (recOp) {
+					equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
+				}
 				equationTextBox.Text += "^";
 			}
 			recEquals = false;
+			recOp = true;
 		}
 
 		private void factorialButton_MouseClick(object sender, MouseEventArgs e) {
@@ -245,16 +293,19 @@ namespace WindowsFormsApplication {
 				equationTextBox.Text += "!";
 			}
 			recEquals = false;
+			recOp = false;
 		}
 
 		private void squaredRootButton_MouseClick(object sender, MouseEventArgs e) {
 			equationTextBox.Text += "sqrt(";
 			recEquals = false;
+			recOp = false;
 		}
 
 		private void logButton_MouseClick(object sender, MouseEventArgs e) {
 			equationTextBox.Text += "log(";
 			recEquals = false;
+			recOp = false;
 		}
 
 		private void button_MouseEnter(object sender, EventArgs e) {
