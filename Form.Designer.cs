@@ -469,4 +469,3 @@
 		private System.Windows.Forms.Button powerButton;
 	}
 }
-
