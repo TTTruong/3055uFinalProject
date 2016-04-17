@@ -145,7 +145,7 @@ namespace WindowsFormsApplication {
 			recEquals = true;
 		}
 
-		private void backButton_Click(object sender, EventArgs e) {
+		private void backButton_MouseClick(object sender, MouseEventArgs e) {
 			if (equationTextBox.Text != "") {
 				equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
 			}

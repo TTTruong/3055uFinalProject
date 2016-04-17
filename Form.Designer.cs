@@ -271,7 +271,7 @@
 			this.backButton.TabIndex = 19;
 			this.backButton.Text = "←";
 			this.backButton.UseVisualStyleBackColor = true;
-			this.backButton.Click += new System.EventHandler(this.backButton_Click);
+			this.backButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.backButton_MouseClick);
 			this.backButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.backButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
