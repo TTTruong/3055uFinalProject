@@ -131,13 +131,9 @@ namespace WindowsFormsApplication {
 		}
 
 		private void textBox1_KeyPress(object sender, KeyPressEventArgs e) {
-     		if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), "[\\d+()\\-+x/.]+")) {
+     		if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), "[\\d+()\\-+x/.\\b]+")) {
           		e.Handled = true;
-     		} else if (e.KeyChar == 13) {
-     			equalsButton.PerformClick();
- 			} else if (e.KeyChar == 8) {
- 				backButton.PerformClick();
- 			}
+     		}
 		}
 
 		private void clearButton_MouseClick(object sender, MouseEventArgs e) {
