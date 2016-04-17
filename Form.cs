@@ -131,7 +131,7 @@ namespace WindowsFormsApplication {
 		}
 
 		private void textBox1_KeyPress(object sender, KeyPressEventArgs e) {
-     		if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), "[\\d+()\\-+x/.\\b]+")) {
+     		if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), "[\\d+()\\-+x/.^\\b]+")) {
           		e.Handled = true;
      		}
 		}
@@ -188,7 +188,17 @@ namespace WindowsFormsApplication {
 		}
 
 		private void wolframButton_MouseClick(object sender, MouseEventArgs e) {
+			string wolframUrl = "http://www.wolframalpha.com/input?i=";
 
+			foreach(char c in equationTextBox.Text) {
+				if (c == '+') {
+					wolframUrl += "%2B";
+				} else {
+					wolframUrl += c.ToString();
+				}
+			}
+
+			System.Diagnostics.Process.Start(wolframUrl);
 		}
 
 		private void leftPButton_MouseClick(object sender, MouseEventArgs e) {
