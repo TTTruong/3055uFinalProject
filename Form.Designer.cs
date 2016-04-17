@@ -308,6 +308,7 @@
 			this.leftPButton.TabIndex = 22;
 			this.leftPButton.Text = "(";
 			this.leftPButton.UseVisualStyleBackColor = true;
+			this.leftPButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.leftPButton_MouseClick);
 			this.leftPButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.leftPButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
@@ -319,6 +320,7 @@
 			this.rightPButton.TabIndex = 23;
 			this.rightPButton.Text = ")";
 			this.rightPButton.UseVisualStyleBackColor = true;
+			this.rightPButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.rightPButton_MouseClick);
 			this.rightPButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.rightPButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
@@ -330,6 +332,7 @@
 			this.squaredButton.TabIndex = 24;
 			this.squaredButton.Text = "x^2";
 			this.squaredButton.UseVisualStyleBackColor = true;
+			this.squaredButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.squaredButton_MouseClick);
 			this.squaredButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.squaredButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
@@ -341,6 +344,7 @@
 			this.cubedButton.TabIndex = 25;
 			this.cubedButton.Text = "x^3";
 			this.cubedButton.UseVisualStyleBackColor = true;
+			this.cubedButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cubedButton_MouseClick);
 			this.cubedButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.cubedButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
@@ -352,6 +356,7 @@
 			this.factorialButton.TabIndex = 26;
 			this.factorialButton.Text = "n!";
 			this.factorialButton.UseVisualStyleBackColor = true;
+			this.factorialButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.factorialButton_MouseClick);
 			this.factorialButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.factorialButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
@@ -363,6 +368,7 @@
 			this.squaredRootButton.TabIndex = 27;
 			this.squaredRootButton.Text = "√";
 			this.squaredRootButton.UseVisualStyleBackColor = true;
+
 			this.squaredRootButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.squaredRootButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
@@ -385,6 +391,7 @@
 			this.powerButton.TabIndex = 29;
 			this.powerButton.Text = "x^y";
 			this.powerButton.UseVisualStyleBackColor = true;
+			this.powerButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.powerButton_MouseClick);
 			this.powerButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.powerButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			

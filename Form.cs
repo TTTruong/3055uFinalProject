@@ -191,6 +191,50 @@ namespace WindowsFormsApplication {
 
 		}
 
+		private void leftPButton_MouseClick(object sender, MouseEventArgs e) {
+			equationTextBox.Text += "(";
+		}
+
+		private void rightPButton_MouseClick(object sender, MouseEventArgs e) {
+			equationTextBox.Text += ")";
+		}
+
+		private void squaredButton_MouseClick(object sender, MouseEventArgs e) {
+			if (equationTextBox.Text == "") {
+				equationTextBox.Text += "0^2";
+			} else {
+				equationTextBox.Text += "^2";
+			}
+			recEquals = false;
+		}
+
+		private void cubedButton_MouseClick(object sender, MouseEventArgs e) {
+			if (equationTextBox.Text == "") {
+				equationTextBox.Text += "0^3";
+			} else {
+				equationTextBox.Text += "^3";
+			}
+			recEquals = false;
+		}
+
+		private void powerButton_MouseClick(object sender, MouseEventArgs e) {
+			if (equationTextBox.Text == "") {
+				equationTextBox.Text += "0^";
+			} else {
+				equationTextBox.Text += "^";
+			}
+			recEquals = false;
+		}
+
+		private void factorialButton_MouseClick(object sender, MouseEventArgs e) {
+			if (equationTextBox.Text == "") {
+				equationTextBox.Text += "0!";
+			} else {
+				equationTextBox.Text += "!";
+			}
+			recEquals = false;
+		}
+
 		private void button_MouseEnter(object sender, EventArgs e) {
 			Button btn = sender as Button;
     		btn.BackColor = System.Drawing.Color.Red;
