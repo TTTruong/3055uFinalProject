@@ -193,10 +193,12 @@ namespace WindowsFormsApplication {
 
 		private void leftPButton_MouseClick(object sender, MouseEventArgs e) {
 			equationTextBox.Text += "(";
+			recEquals = false;
 		}
 
 		private void rightPButton_MouseClick(object sender, MouseEventArgs e) {
 			equationTextBox.Text += ")";
+			recEquals = false;
 		}
 
 		private void squaredButton_MouseClick(object sender, MouseEventArgs e) {
@@ -232,6 +234,16 @@ namespace WindowsFormsApplication {
 			} else {
 				equationTextBox.Text += "!";
 			}
+			recEquals = false;
+		}
+
+		private void squaredRootButton_MouseClick(object sender, MouseEventArgs e) {
+			equationTextBox.Text += "sqrt(";
+			recEquals = false;
+		}
+
+		private void logButton_MouseClick(object sender, MouseEventArgs e) {
+			equationTextBox.Text += "log(";
 			recEquals = false;
 		}
 

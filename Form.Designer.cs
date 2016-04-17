@@ -368,7 +368,7 @@
 			this.squaredRootButton.TabIndex = 27;
 			this.squaredRootButton.Text = "√";
 			this.squaredRootButton.UseVisualStyleBackColor = true;
-
+			this.squaredRootButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.squaredRootButton_MouseClick);
 			this.squaredRootButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.squaredRootButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
@@ -380,6 +380,7 @@
 			this.logButton.TabIndex = 28;
 			this.logButton.Text = "log";
 			this.logButton.UseVisualStyleBackColor = true;
+			this.logButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.logButton_MouseClick);
 			this.logButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.logButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
