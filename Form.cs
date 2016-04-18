@@ -169,36 +169,37 @@ namespace WindowsFormsApplication {
 		private void equalsButton_Click(object sender, EventArgs e) {
 			
 			try {
-			NCalc.Expression exp = new NCalc.Expression("Pow(3,2)");
-			var v = exp.Evaluate();
+				NCalc.Expression exp = new NCalc.Expression(equationTextBox.Text);
+				var v = exp.Evaluate();
 
-			equationTextBox.Text = v.ToString();
+				if (v.ToString() == "Infinity") {
+					equationTextBox.Text = "Undefined";
+				} else {
+					equationTextBox.Text = v.ToString();
+				}
 			} catch (Exception except) {
 				equationTextBox.Text = "Undefined";
 			}
-
-			/*try {
-				double answer = Evaluate(equationTextBox.Text);
-				equationTextBox.Text = answer.ToString();
-			} catch (Exception except) {
-				equationTextBox.Text = "Undefined";
-			}*/
 
 			recEquals = true;
 			recOp = false;
 		}
 
 		private void backButton_MouseClick(object sender, MouseEventArgs e) {
-			if (equationTextBox.Text != "") {
-				equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
-
+			if (equationTextBox.Text == "Undefined") {
+				equationTextBox.Text = "";
+			} else {
 				if (equationTextBox.Text != "") {
-					if (!System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/x]+")) {
-	          			recOp = true;
-     				} else {
-     					recOp = false;
+					equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
+
+					if (equationTextBox.Text != "") {
+						if (!System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/x]+")) {
+	          				recOp = true;
+     					} else {
+     						recOp = false;
+     					}
      				}
-     			}
+				}
 			}
 		}
 
