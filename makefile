@@ -1,4 +1,4 @@
-NAMESPACES = -r:System.Windows.Forms.dll -r:System.Drawing.dll -r:System.Data.dll
+NAMESPACES = -r:System.Windows.Forms.dll -r:System.Drawing.dll -r:System.Data.dll -r:NCalc.dll
 all:
 	@echo "\n===== Creating executables. ====="
 	gmcs $(NAMESPACES) *.cs

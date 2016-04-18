@@ -39,7 +39,7 @@
 			this.squaredButton = new System.Windows.Forms.Button();
 			this.cubedButton = new System.Windows.Forms.Button();
 			this.factorialButton = new System.Windows.Forms.Button();
-			this.squaredRootButton = new System.Windows.Forms.Button();
+			this.squareRootButton = new System.Windows.Forms.Button();
 			this.logButton = new System.Windows.Forms.Button();
 			this.powerButton = new System.Windows.Forms.Button();
 			this.SuspendLayout();
@@ -362,17 +362,17 @@
 			this.factorialButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.factorialButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
-			// squaredRootButton
-			this.squaredRootButton.BackColor = System.Drawing.Color.Silver;
-			this.squaredRootButton.Location = new System.Drawing.Point(58, 202);
-			this.squaredRootButton.Name = "squaredRootButton";
-			this.squaredRootButton.Size = new System.Drawing.Size(40, 40);
-			this.squaredRootButton.TabIndex = 27;
-			this.squaredRootButton.Text = "√";
-			this.squaredRootButton.UseVisualStyleBackColor = true;
-			this.squaredRootButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.squaredRootButton_MouseClick);
-			this.squaredRootButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
-			this.squaredRootButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
+			// squareRootButton
+			this.squareRootButton.BackColor = System.Drawing.Color.Silver;
+			this.squareRootButton.Location = new System.Drawing.Point(58, 202);
+			this.squareRootButton.Name = "squareRootButton";
+			this.squareRootButton.Size = new System.Drawing.Size(40, 40);
+			this.squareRootButton.TabIndex = 27;
+			this.squareRootButton.Text = "√";
+			this.squareRootButton.UseVisualStyleBackColor = true;
+			this.squareRootButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.squareRootButton_MouseClick);
+			this.squareRootButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.squareRootButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
 			// logButton
 			this.logButton.BackColor = System.Drawing.Color.Silver;
@@ -380,7 +380,7 @@
 			this.logButton.Name = "logButton";
 			this.logButton.Size = new System.Drawing.Size(40, 40);
 			this.logButton.TabIndex = 28;
-			this.logButton.Text = "log";
+			this.logButton.Text = "log10";
 			this.logButton.UseVisualStyleBackColor = true;
 			this.logButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.logButton_MouseClick);
 			this.logButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
@@ -405,7 +405,7 @@
 			this.ClientSize = new System.Drawing.Size(305, 297);
 			this.Controls.Add(this.powerButton);
 			this.Controls.Add(this.logButton);
-			this.Controls.Add(this.squaredRootButton);
+			this.Controls.Add(this.squareRootButton);
 			this.Controls.Add(this.factorialButton);
 			this.Controls.Add(this.cubedButton);
 			this.Controls.Add(this.squaredButton);
@@ -466,7 +466,7 @@
 		private System.Windows.Forms.Button squaredButton;
 		private System.Windows.Forms.Button cubedButton;
 		private System.Windows.Forms.Button factorialButton;
-		private System.Windows.Forms.Button squaredRootButton;
+		private System.Windows.Forms.Button squareRootButton;
 		private System.Windows.Forms.Button logButton;
 		private System.Windows.Forms.Button powerButton;
 	}

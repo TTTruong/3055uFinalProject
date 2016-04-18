@@ -158,8 +158,32 @@ namespace WindowsFormsApplication {
 			recOp = false;
 		}
 
+		static double Evaluate(string expression) {
+ 			var loDataTable = new DataTable();
+  			var loDataColumn = new DataColumn("Eval", typeof (double), expression);
+  			loDataTable.Columns.Add(loDataColumn);
+  			loDataTable.Rows.Add(0);
+  			return (double) (loDataTable.Rows[0]["Eval"]);
+		}
+
 		private void equalsButton_Click(object sender, EventArgs e) {
-			equationTextBox.Text = "equals";
+			
+			try {
+			NCalc.Expression exp = new NCalc.Expression("Pow(3,2)");
+			var v = exp.Evaluate();
+
+			equationTextBox.Text = v.ToString();
+			} catch (Exception except) {
+				equationTextBox.Text = "Undefined";
+			}
+
+			/*try {
+				double answer = Evaluate(equationTextBox.Text);
+				equationTextBox.Text = answer.ToString();
+			} catch (Exception except) {
+				equationTextBox.Text = "Undefined";
+			}*/
+
 			recEquals = true;
 			recOp = false;
 		}
@@ -206,12 +230,12 @@ namespace WindowsFormsApplication {
 
 		private void multiplyButton_MouseClick(object sender, MouseEventArgs e) {
 			if (equationTextBox.Text == "") {
-				equationTextBox.Text += "0x";
+				equationTextBox.Text += "0*";
 			} else {
 				if (recOp) {
 					equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
 				}
-				equationTextBox.Text += "x";
+				equationTextBox.Text += "*";
 			}
 			recEquals = false;
 			recOp = true;
@@ -282,12 +306,12 @@ namespace WindowsFormsApplication {
 
 		private void powerButton_MouseClick(object sender, MouseEventArgs e) {
 			if (equationTextBox.Text == "") {
-				equationTextBox.Text += "0^";
+				equationTextBox.Text += "Pow(";
 			} else {
 				if (recOp) {
 					equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
 				}
-				equationTextBox.Text += "^";
+				equationTextBox.Text += "Pow(";
 			}
 			recEquals = false;
 			recOp = true;
@@ -295,22 +319,22 @@ namespace WindowsFormsApplication {
 
 		private void factorialButton_MouseClick(object sender, MouseEventArgs e) {
 			if (equationTextBox.Text == "") {
-				equationTextBox.Text += "0!";
+				equationTextBox.Text += "Fact(";
 			} else {
-				equationTextBox.Text += "!";
+				equationTextBox.Text += "Fact(";
 			}
 			recEquals = false;
 			recOp = false;
 		}
 
-		private void squaredRootButton_MouseClick(object sender, MouseEventArgs e) {
-			equationTextBox.Text += "sqrt(";
+		private void squareRootButton_MouseClick(object sender, MouseEventArgs e) {
+			equationTextBox.Text += "Sqrt(";
 			recEquals = false;
 			recOp = false;
 		}
 
 		private void logButton_MouseClick(object sender, MouseEventArgs e) {
-			equationTextBox.Text += "log(";
+			equationTextBox.Text += "Log10(";
 			recEquals = false;
 			recOp = false;
 		}
