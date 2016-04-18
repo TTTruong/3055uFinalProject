@@ -130,10 +130,12 @@ namespace WindowsFormsApplication {
 				equationTextBox.Text = "0.";
 				recEquals = false;
 			} else {
-				if (equationTextBox.Text == "") {
-					equationTextBox.Text = "0.";
+				if (equationTextBox.Text == "" || equationTextBox.Text[equationTextBox.Text.Length-1] == '(') {
+					equationTextBox.Text += "0.";
 				} else {
-					equationTextBox.Text += ".";
+					if (equationTextBox.Text[equationTextBox.Text.Length-1] != '.') {
+						equationTextBox.Text += ".";
+					}
 				}
 			}
 			recOp = false;
@@ -243,7 +245,11 @@ namespace WindowsFormsApplication {
 		}
 
 		private void leftPButton_MouseClick(object sender, MouseEventArgs e) {
-			equationTextBox.Text += "(";
+			if (recEquals) {
+				equationTextBox.Text = "(";
+			} else {
+				equationTextBox.Text += "(";
+			}
 			recEquals = false;
 			recOp = false;
 		}
