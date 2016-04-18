@@ -52,7 +52,9 @@
 			this.equationTextBox.TabIndex = 1;
 			this.equationTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.equationTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-			this.equationTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+			//this.equationTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+			this.equationTextBox.ReadOnly = true;
+			this.equationTextBox.BackColor = System.Drawing.SystemColors.Window;
 
 			// oneButton
 			this.oneButton.BackColor = System.Drawing.Color.Silver;

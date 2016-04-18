@@ -143,11 +143,12 @@ namespace WindowsFormsApplication {
 			
 		}
 
+		/* Commented out for now.
 		private void textBox1_KeyPress(object sender, KeyPressEventArgs e) {
      		if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), "[\\d+()\\-+x/.^\\b]+")) {
           		e.Handled = true;
      		}
-		}
+		}*/
 
 		private void clearButton_MouseClick(object sender, MouseEventArgs e) {
 			equationTextBox.Text = "";
