@@ -329,7 +329,17 @@ namespace WindowsFormsApplication {
 		}
 
 		private void squareRootButton_MouseClick(object sender, MouseEventArgs e) {
-			equationTextBox.Text += "Sqrt(";
+			
+			if (equationTextBox.Text != "") {
+				if (equationTextBox.Text[equationTextBox.Text.Length-1] == '(') {
+					equationTextBox.Text += "Sqrt(";
+				} else {
+					equationTextBox.Text += "*Sqrt(";
+				}
+			} else {
+				equationTextBox.Text += "Sqrt(";
+			}
+
 			recEquals = false;
 			recOp = false;
 		}
