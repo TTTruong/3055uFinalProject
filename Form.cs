@@ -75,7 +75,7 @@ namespace WindowsFormsApplication {
 				if (equationTextBox.Text[equationTextBox.Text.Length-1] == '.') {
 					equationTextBox.Text += "0*" + specOp;
 				} else {
-					if (System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/*(]+")) {
+					if (recOp || equationTextBox.Text[equationTextBox.Text.Length-1] == '(') {
 						equationTextBox.Text += specOp;
 					} else {
 						equationTextBox.Text += "*" + specOp;
@@ -186,7 +186,7 @@ namespace WindowsFormsApplication {
 			
 			try {
 				if (equationTextBox.Text != "") {
-					if (System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/*(]+")) {
+					if (recOp || equationTextBox.Text[equationTextBox.Text.Length-1] == '(') {
 						equationTextBox.Text += "0";
 					}
 	
@@ -197,7 +197,7 @@ namespace WindowsFormsApplication {
 					NCalc.Expression exp = new NCalc.Expression(equationTextBox.Text);
 					var v = exp.Evaluate();
 	
-					if (v.ToString() == "Infinity") {
+					if (v.ToString() == "Infinity" || v.ToString() == "NaN") {
 						equationTextBox.Text = "Undefined";
 					} else {
 						equationTextBox.Text = v.ToString();
@@ -272,7 +272,7 @@ namespace WindowsFormsApplication {
 			if (recEquals) {
 				equationTextBox.Text = "(";
 			} else {
-				if (equationTextBox.Text != "" && !System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/*(]+")) {
+				if (equationTextBox.Text != "" && !(recOp || equationTextBox.Text[equationTextBox.Text.Length-1] == '(')) {
 					equationTextBox.Text += "*";
 				}
 
@@ -287,7 +287,7 @@ namespace WindowsFormsApplication {
 		private void rightPButton_MouseClick(object sender, MouseEventArgs e) {
 			if (equationTextBox.Text != "" && rightPCount < leftPCount) {
 
-				if (System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/*(]+")) {
+				if (recOp || equationTextBox.Text[equationTextBox.Text.Length-1] == '(') {
 					equationTextBox.Text += "0";
 				}
 
