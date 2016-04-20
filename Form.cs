@@ -212,6 +212,8 @@ namespace WindowsFormsApplication {
 		private void additionButton_MouseClick(object sender, MouseEventArgs e) {
 			if (equationTextBox.Text == "" || equationTextBox.Text == "Undefined") {
 				equationTextBox.Text = "0+";
+				recEquals = false;
+				recOp = true;
 			} else {
 				if (recOp) {
 					equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
@@ -227,6 +229,8 @@ namespace WindowsFormsApplication {
 		private void subtractButton_MouseClick(object sender, MouseEventArgs e) {
 			if (equationTextBox.Text == "" || equationTextBox.Text == "Undefined") {
 				equationTextBox.Text = "0-";
+				recEquals = false;
+				recOp = true;
 			} else {
 				if (recOp) {
 					equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
@@ -242,6 +246,8 @@ namespace WindowsFormsApplication {
 		private void multiplyButton_MouseClick(object sender, MouseEventArgs e) {
 			if (equationTextBox.Text == "" || equationTextBox.Text == "Undefined") {
 				equationTextBox.Text = "0*";
+				recEquals = false;
+				recOp = true;
 			} else {
 				if (recOp) {
 					equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
@@ -257,6 +263,8 @@ namespace WindowsFormsApplication {
 		private void divideButton_MouseClick(object sender, MouseEventArgs e) {
 			if (equationTextBox.Text == "" || equationTextBox.Text == "Undefined") {
 				equationTextBox.Text = "0/";
+				recEquals = false;
+				recOp = true;
 			} else {
 				if (recOp) {
 					equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
