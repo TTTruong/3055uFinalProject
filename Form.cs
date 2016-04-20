@@ -201,7 +201,7 @@ namespace WindowsFormsApplication {
 					}
 				}
 			} catch (Exception except) {
-				equationTextBox.Text = "Undefined";
+				//equationTextBox.Text = "Undefined";
 			}
 
 			recEquals = true;
@@ -215,6 +215,13 @@ namespace WindowsFormsApplication {
 				equationTextBox.Text = "";
 			} else {
 				if (equationTextBox.Text != "") {
+
+					if (equationTextBox.Text[equationTextBox.Text.Length-1] == '(') {
+						leftPCount--;
+					} else if (equationTextBox.Text[equationTextBox.Text.Length-1] == ')') {
+						rightPCount--;
+					}
+
 					equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
 
 					if (equationTextBox.Text != "") {
@@ -327,7 +334,7 @@ namespace WindowsFormsApplication {
 		}
 
 		private void rightPButton_MouseClick(object sender, MouseEventArgs e) {
-			if (rightPCount < leftPCount) {
+			if (equationTextBox.Text != "" && rightPCount < leftPCount) {
 
 				if (System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/*(]+")) {
 					equationTextBox.Text += "0";
@@ -387,10 +394,14 @@ namespace WindowsFormsApplication {
 		private void squareRootButton_MouseClick(object sender, MouseEventArgs e) {
 			
 			if (equationTextBox.Text != "") {
-				if (equationTextBox.Text[equationTextBox.Text.Length-1] == '(') {
-					equationTextBox.Text += "Sqrt(";
+				if (equationTextBox.Text[equationTextBox.Text.Length-1] == '.') {
+					equationTextBox.Text += "0*Sqrt(";
 				} else {
-					equationTextBox.Text += "*Sqrt(";
+					if (System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/*(]+")) {
+						equationTextBox.Text += "Sqrt(";
+					} else {
+						equationTextBox.Text += "*Sqrt(";
+					}
 				}
 			} else {
 				equationTextBox.Text += "Sqrt(";
@@ -402,7 +413,21 @@ namespace WindowsFormsApplication {
 		}
 
 		private void logButton_MouseClick(object sender, MouseEventArgs e) {
-			equationTextBox.Text += "Log10(";
+			if (equationTextBox.Text != "") {
+				if (equationTextBox.Text[equationTextBox.Text.Length-1] == '.') {
+					equationTextBox.Text += "0*Log10(";
+				} else {
+					if (System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/*(]+")) {
+						equationTextBox.Text += "Log10(";
+					} else {
+						equationTextBox.Text += "*Log10(";
+					}
+				}
+			} else {
+				equationTextBox.Text += "Log10(";
+			}
+
+			leftPCount++;
 			recEquals = false;
 			recOp = false;
 		}

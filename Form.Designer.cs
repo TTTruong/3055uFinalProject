@@ -433,11 +433,11 @@
 			this.Controls.Add(this.equationTextBox);
 			this.Name = "Calculator";
 			this.Text = "Calculator";
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.AcceptButton = this.equalsButton;
 			this.Load += new System.EventHandler(this.Calculator_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
-
 		}
 
 		#endregion
