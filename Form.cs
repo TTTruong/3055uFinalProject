@@ -25,138 +25,61 @@ namespace WindowsFormsApplication {
 			rightPCount = 0;
 		}
 
+		private void number(string num) {
+			if (recEquals) {
+				equationTextBox.Text = num;
+				recEquals = false;
+			} else {
+				if (equationTextBox.Text != "" && equationTextBox.Text[equationTextBox.Text.Length-1] == ')') {
+					equationTextBox.Text += "*";
+				}
+				equationTextBox.Text += num;
+			}
+			recOp = false;
+		}
+
 		private void Calculator_Load(object sender, EventArgs e) {
 
 		}
 
 		private void zeroButton_MouseClick(object sender, MouseEventArgs e) {
-			if (recEquals) {
-				equationTextBox.Text = "0";
-				recEquals = false;
-			} else {
-				if (equationTextBox.Text != "" && equationTextBox.Text[equationTextBox.Text.Length-1] == ')') {
-					equationTextBox.Text += "*";
-				}
-				equationTextBox.Text += "0";
-			}
-			recOp = false;
+			number("0");
 		}
 
 		private void oneButton_MouseClick(object sender, MouseEventArgs e) {
-			if (recEquals) {
-				equationTextBox.Text = "1";
-				recEquals = false;
-			} else {
-				if (equationTextBox.Text != "" && equationTextBox.Text[equationTextBox.Text.Length-1] == ')') {
-					equationTextBox.Text += "*";
-				}
-				equationTextBox.Text += "1";
-			}
-			recOp = false;
+			number("1");
 		}
 
 		private void twoButton_MouseClick(object sender, MouseEventArgs e) {
-			if (recEquals) {
-				equationTextBox.Text = "2";
-				recEquals = false;
-			} else {
-				if (equationTextBox.Text != "" && equationTextBox.Text[equationTextBox.Text.Length-1] == ')') {
-					equationTextBox.Text += "*";
-				}
-				equationTextBox.Text += "2";
-			}
-			recOp = false;
+			number("2");
 		}
 
 		private void threeButton_MouseClick(object sender, MouseEventArgs e) {
-			if (recEquals) {
-				equationTextBox.Text = "3";
-				recEquals = false;
-			} else {
-				if (equationTextBox.Text != "" && equationTextBox.Text[equationTextBox.Text.Length-1] == ')') {
-					equationTextBox.Text += "*";
-				}
-				equationTextBox.Text += "3";
-			}
-			recOp = false;
+			number("3");
 		}
 
 		private void fourButton_MouseClick(object sender, MouseEventArgs e) {
-			if (recEquals) {
-				equationTextBox.Text = "4";
-				recEquals = false;
-			} else {
-				if (equationTextBox.Text != "" && equationTextBox.Text[equationTextBox.Text.Length-1] == ')') {
-					equationTextBox.Text += "*";
-				}
-				equationTextBox.Text += "4";
-			}
-			recOp = false;
+			number("4");
 		}
 
 		private void fiveButton_MouseClick(object sender, MouseEventArgs e) {
-			if (recEquals) {
-				equationTextBox.Text = "5";
-				recEquals = false;
-			} else {
-				if (equationTextBox.Text != "" && equationTextBox.Text[equationTextBox.Text.Length-1] == ')') {
-					equationTextBox.Text += "*";
-				}
-				equationTextBox.Text += "5";
-			}
-			recOp = false;
+			number("5");
 		}
 
 		private void sixButton_MouseClick(object sender, MouseEventArgs e) {
-			if (recEquals) {
-				equationTextBox.Text = "6";
-				recEquals = false;
-			} else {
-				if (equationTextBox.Text != "" && equationTextBox.Text[equationTextBox.Text.Length-1] == ')') {
-					equationTextBox.Text += "*";
-				}
-				equationTextBox.Text += "6";
-			}
-			recOp = false;
+			number("6");
 		}
 
 		private void sevenButton_MouseClick(object sender, MouseEventArgs e) {
-			if (recEquals) {
-				equationTextBox.Text = "7";
-				recEquals = false;
-			} else {
-				if (equationTextBox.Text != "" && equationTextBox.Text[equationTextBox.Text.Length-1] == ')') {
-					equationTextBox.Text += "*";
-				}
-				equationTextBox.Text += "7";
-			}
-			recOp = false;
+			number("7");
 		}
 
 		private void eightButton_MouseClick(object sender, MouseEventArgs e) {
-			if (recEquals) {
-				equationTextBox.Text = "8";
-				recEquals = false;
-			} else {
-				if (equationTextBox.Text != "" && equationTextBox.Text[equationTextBox.Text.Length-1] == ')') {
-					equationTextBox.Text += "*";
-				}
-				equationTextBox.Text += "8";
-			}
-			recOp = false;
+			number("8");
 		}
 
 		private void nineButton_MouseClick(object sender, MouseEventArgs e) {
-			if (recEquals) {
-				equationTextBox.Text = "9";
-				recEquals = false;
-			} else {
-				if (equationTextBox.Text != "" && equationTextBox.Text[equationTextBox.Text.Length-1] == ')') {
-					equationTextBox.Text += "*";
-				}
-				equationTextBox.Text += "9";
-			}
-			recOp = false;
+			number("9");
 		}
 
 		private void decimalButton_MouseClick(object sender, MouseEventArgs e) {
