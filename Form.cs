@@ -57,6 +57,30 @@ namespace WindowsFormsApplication {
 			}
 		}
 
+		private void specConstant(string constant) {
+
+		}
+
+		private void specOperator(string specOp) {
+			if (equationTextBox.Text != "") {
+				if (equationTextBox.Text[equationTextBox.Text.Length-1] == '.') {
+					equationTextBox.Text += "0*" + specOp;
+				} else {
+					if (System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/*(]+")) {
+						equationTextBox.Text += specOp;
+					} else {
+						equationTextBox.Text += "*" + specOp;
+					}
+				}
+			} else {
+				equationTextBox.Text += specOp;
+			}
+
+			leftPCount++;
+			recEquals = false;
+			recOp = false;
+		}
+
 		private void Calculator_Load(object sender, EventArgs e) {
 
 		}
@@ -293,44 +317,11 @@ namespace WindowsFormsApplication {
 		}
 
 		private void squareRootButton_MouseClick(object sender, MouseEventArgs e) {
-			
-			if (equationTextBox.Text != "") {
-				if (equationTextBox.Text[equationTextBox.Text.Length-1] == '.') {
-					equationTextBox.Text += "0*Sqrt(";
-				} else {
-					if (System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/*(]+")) {
-						equationTextBox.Text += "Sqrt(";
-					} else {
-						equationTextBox.Text += "*Sqrt(";
-					}
-				}
-			} else {
-				equationTextBox.Text += "Sqrt(";
-			}
-
-			leftPCount++;
-			recEquals = false;
-			recOp = false;
+			specOperator("Sqrt(");
 		}
 
 		private void logButton_MouseClick(object sender, MouseEventArgs e) {
-			if (equationTextBox.Text != "") {
-				if (equationTextBox.Text[equationTextBox.Text.Length-1] == '.') {
-					equationTextBox.Text += "0*Log10(";
-				} else {
-					if (System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/*(]+")) {
-						equationTextBox.Text += "Log10(";
-					} else {
-						equationTextBox.Text += "*Log10(";
-					}
-				}
-			} else {
-				equationTextBox.Text += "Log10(";
-			}
-
-			leftPCount++;
-			recEquals = false;
-			recOp = false;
+			specOperator("Log10(");
 		}
 
 		private void button_MouseEnter(object sender, EventArgs e) {
