@@ -58,7 +58,16 @@ namespace WindowsFormsApplication {
 		}
 
 		private void specConstant(string constant) {
-
+			if (equationTextBox.Text == "" || recEquals) {
+				equationTextBox.Text = "(" + constant +")";
+				recEquals = false;
+			} else {
+				if (!(recOp || equationTextBox.Text[equationTextBox.Text.Length-1] == '(')) {
+					equationTextBox.Text += "*";
+				}
+					equationTextBox.Text += "(" + constant + ")";
+			}
+			recOp = false;
 		}
 
 		private void specOperator(string specOp) {
@@ -291,29 +300,11 @@ namespace WindowsFormsApplication {
 		}
 
 		private void piButton_MouseClick(object sender, MouseEventArgs e) {
-			if (equationTextBox.Text == "" || recEquals) {
-				equationTextBox.Text = "(3.14159)";
-				recEquals = false;
-			} else {
-				if (!(recOp || equationTextBox.Text[equationTextBox.Text.Length-1] == '(')) {
-					equationTextBox.Text += "*";
-				}
-					equationTextBox.Text += "(3.14159)";
-			}
-			recOp = false;
+			specConstant("3.14159");
 		}
 
 		private void eulerButton_MouseClick(object sender, MouseEventArgs e) {
-			if (equationTextBox.Text == "" || recEquals) {
-				equationTextBox.Text = "(2.718)";
-				recEquals = false;
-			} else {
-				if (!(recOp || equationTextBox.Text[equationTextBox.Text.Length-1] == '(')) {
-					equationTextBox.Text += "*";
-				}
-					equationTextBox.Text += "(2.718)";
-			}
-			recOp = false;
+			specConstant("2.718");
 		}
 
 		private void squareRootButton_MouseClick(object sender, MouseEventArgs e) {
