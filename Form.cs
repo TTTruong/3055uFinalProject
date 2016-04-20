@@ -160,6 +160,8 @@ namespace WindowsFormsApplication {
 			equationTextBox.Text = "";
 			recEquals = false;
 			recOp = false;
+			leftPCount = 0;
+			rightPCount = 0;
 		}
 
 		private void equalsButton_Click(object sender, EventArgs e) {
@@ -189,6 +191,8 @@ namespace WindowsFormsApplication {
 
 			recEquals = true;
 			recOp = false;
+			leftPCount = 0;
+			rightPCount = 0;
 		}
 
 		private void backButton_MouseClick(object sender, MouseEventArgs e) {
