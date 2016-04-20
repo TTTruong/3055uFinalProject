@@ -162,28 +162,26 @@ namespace WindowsFormsApplication {
 			recOp = false;
 		}
 
-		static double Evaluate(string expression) {
- 			var loDataTable = new DataTable();
-  			var loDataColumn = new DataColumn("Eval", typeof (double), expression);
-  			loDataTable.Columns.Add(loDataColumn);
-  			loDataTable.Rows.Add(0);
-  			return (double) (loDataTable.Rows[0]["Eval"]);
-		}
-
 		private void equalsButton_Click(object sender, EventArgs e) {
 			
 			try {
-				for (int i=rightPCount; i < leftPCount; i++) {
-					equationTextBox.Text += ")";
-				}
-
-				NCalc.Expression exp = new NCalc.Expression(equationTextBox.Text);
-				var v = exp.Evaluate();
-
-				if (v.ToString() == "Infinity") {
-					equationTextBox.Text = "Undefined";
-				} else {
-					equationTextBox.Text = v.ToString();
+				if (equationTextBox.Text != "") {
+					if (System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/*(]+")) {
+						equationTextBox.Text += "0";
+					}
+	
+					for (int i=rightPCount; i < leftPCount; i++) {
+						equationTextBox.Text += ")";
+					}
+	
+					NCalc.Expression exp = new NCalc.Expression(equationTextBox.Text);
+					var v = exp.Evaluate();
+	
+					if (v.ToString() == "Infinity") {
+						equationTextBox.Text = "Undefined";
+					} else {
+						equationTextBox.Text = v.ToString();
+					}
 				}
 			} catch (Exception except) {
 				equationTextBox.Text = "Undefined";
@@ -212,8 +210,8 @@ namespace WindowsFormsApplication {
 		}
 
 		private void additionButton_MouseClick(object sender, MouseEventArgs e) {
-			if (equationTextBox.Text == "") {
-				equationTextBox.Text += "0+";
+			if (equationTextBox.Text == "" || equationTextBox.Text == "Undefined") {
+				equationTextBox.Text = "0+";
 			} else {
 				if (recOp) {
 					equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
@@ -227,42 +225,48 @@ namespace WindowsFormsApplication {
 		}
 
 		private void subtractButton_MouseClick(object sender, MouseEventArgs e) {
-			if (equationTextBox.Text == "") {
-				equationTextBox.Text += "0-";
+			if (equationTextBox.Text == "" || equationTextBox.Text == "Undefined") {
+				equationTextBox.Text = "0-";
 			} else {
 				if (recOp) {
 					equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
 				}
-				equationTextBox.Text += "-";
+				if (equationTextBox.Text[equationTextBox.Text.Length-1] != '(') {
+					equationTextBox.Text += "-";
+					recEquals = false;
+					recOp = true;
+				}
 			}
-			recEquals = false;
-			recOp = true;
 		}
 
 		private void multiplyButton_MouseClick(object sender, MouseEventArgs e) {
-			if (equationTextBox.Text == "") {
-				equationTextBox.Text += "0*";
+			if (equationTextBox.Text == "" || equationTextBox.Text == "Undefined") {
+				equationTextBox.Text = "0*";
 			} else {
 				if (recOp) {
 					equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
 				}
-				equationTextBox.Text += "*";
+				if (equationTextBox.Text[equationTextBox.Text.Length-1] != '(') {
+					equationTextBox.Text += "*";
+					recEquals = false;
+					recOp = true;
+				}
 			}
-			recEquals = false;
-			recOp = true;
 		}
 
 		private void divideButton_MouseClick(object sender, MouseEventArgs e) {
-			if (equationTextBox.Text == "") {
-				equationTextBox.Text += "0/";
+			if (equationTextBox.Text == "" || equationTextBox.Text == "Undefined") {
+				equationTextBox.Text = "0/";
 			} else {
 				if (recOp) {
 					equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
 				}
-				equationTextBox.Text += "/";
+				if (equationTextBox.Text[equationTextBox.Text.Length-1] != '(') {
+					equationTextBox.Text += "/";
+					recEquals = false;
+					recOp = true;
+				}
 			}
-			recEquals = false;
-			recOp = true;
 		}
 
 		private void wolframButton_MouseClick(object sender, MouseEventArgs e) {
@@ -297,6 +301,11 @@ namespace WindowsFormsApplication {
 
 		private void rightPButton_MouseClick(object sender, MouseEventArgs e) {
 			if (rightPCount < leftPCount) {
+
+				if (System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/*(]+")) {
+					equationTextBox.Text += "0";
+				}
+
 				equationTextBox.Text += ")";
 
 				rightPCount++;
