@@ -160,8 +160,13 @@ namespace WindowsFormsApplication {
 			recOp = false;
 		}
 
-		private void textBox1_TextChanged(object sender, EventArgs e) {
+		private void equationTextBox_TextChanged(object sender, EventArgs e) {
 			
+		}
+
+		private void equationTextBox_SelectionChanged(Object sender, EventArgs e) {
+
+			equationTextBox.SelectionAlignment = System.Windows.Forms.HorizontalAlignment.Right;
 		}
 
 		/* Commented out for now.
@@ -201,7 +206,7 @@ namespace WindowsFormsApplication {
 					}
 				}
 			} catch (Exception except) {
-				//equationTextBox.Text = "Undefined";
+				equationTextBox.Text = "Overflow";
 			}
 
 			recEquals = true;
@@ -211,7 +216,7 @@ namespace WindowsFormsApplication {
 		}
 
 		private void backButton_MouseClick(object sender, MouseEventArgs e) {
-			if (equationTextBox.Text == "Undefined") {
+			if (equationTextBox.Text == "Undefined" || equationTextBox.Text == "Overflow") {
 				equationTextBox.Text = "";
 			} else {
 				if (equationTextBox.Text != "") {
@@ -236,7 +241,7 @@ namespace WindowsFormsApplication {
 		}
 
 		private void additionButton_MouseClick(object sender, MouseEventArgs e) {
-			if (equationTextBox.Text == "" || equationTextBox.Text == "Undefined") {
+			if (equationTextBox.Text == "" || equationTextBox.Text == "Undefined" || equationTextBox.Text == "Overflow") {
 				equationTextBox.Text = "0+";
 				recEquals = false;
 				recOp = true;
@@ -253,7 +258,7 @@ namespace WindowsFormsApplication {
 		}
 
 		private void subtractButton_MouseClick(object sender, MouseEventArgs e) {
-			if (equationTextBox.Text == "" || equationTextBox.Text == "Undefined") {
+			if (equationTextBox.Text == "" || equationTextBox.Text == "Undefined" || equationTextBox.Text == "Overflow") {
 				equationTextBox.Text = "0-";
 				recEquals = false;
 				recOp = true;
@@ -270,7 +275,7 @@ namespace WindowsFormsApplication {
 		}
 
 		private void multiplyButton_MouseClick(object sender, MouseEventArgs e) {
-			if (equationTextBox.Text == "" || equationTextBox.Text == "Undefined") {
+			if (equationTextBox.Text == "" || equationTextBox.Text == "Undefined" || equationTextBox.Text == "Overflow") {
 				equationTextBox.Text = "0*";
 				recEquals = false;
 				recOp = true;
@@ -287,7 +292,7 @@ namespace WindowsFormsApplication {
 		}
 
 		private void divideButton_MouseClick(object sender, MouseEventArgs e) {
-			if (equationTextBox.Text == "" || equationTextBox.Text == "Undefined") {
+			if (equationTextBox.Text == "" || equationTextBox.Text == "Undefined" || equationTextBox.Text == "Overflow") {
 				equationTextBox.Text = "0/";
 				recEquals = false;
 				recOp = true;

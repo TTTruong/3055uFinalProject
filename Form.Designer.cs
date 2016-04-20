@@ -14,7 +14,7 @@
 		#region Windows Form Designer generated code
 
 		private void InitializeComponent() {
-			this.equationTextBox = new System.Windows.Forms.TextBox();
+			this.equationTextBox = new System.Windows.Forms.RichTextBox();
 			this.oneButton = new System.Windows.Forms.Button();
 			this.twoButton = new System.Windows.Forms.Button();
 			this.threeButton = new System.Windows.Forms.Button();
@@ -50,11 +50,14 @@
 			this.equationTextBox.Name = "equationTextBox";
 			this.equationTextBox.Size = new System.Drawing.Size(283, 40);
 			this.equationTextBox.TabIndex = 1;
-			this.equationTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.equationTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+			this.equationTextBox.SelectionAlignment = System.Windows.Forms.HorizontalAlignment.Right;
+			this.equationTextBox.SelectionChanged += new System.EventHandler(this.equationTextBox_SelectionChanged);
+			this.equationTextBox.TextChanged += new System.EventHandler(this.equationTextBox_TextChanged);
 			//this.equationTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
 			this.equationTextBox.ReadOnly = true;
 			this.equationTextBox.BackColor = System.Drawing.SystemColors.Window;
+			this.equationTextBox.Multiline = false;
+			this.equationTextBox.WordWrap = false;
 
 			// oneButton
 			this.oneButton.BackColor = System.Drawing.Color.Silver;
@@ -441,7 +444,7 @@
 		}
 
 		#endregion
-		private System.Windows.Forms.TextBox equationTextBox;
+		private System.Windows.Forms.RichTextBox equationTextBox;
 		private System.Windows.Forms.Button oneButton;
 		private System.Windows.Forms.Button twoButton;
 		private System.Windows.Forms.Button threeButton;
