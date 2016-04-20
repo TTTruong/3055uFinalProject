@@ -14,11 +14,15 @@ namespace WindowsFormsApplication {
 
 		bool recEquals;
 		bool recOp;
+		int leftPCount;
+		int rightPCount;
 
 		public Calculator() {
 			InitializeComponent();
 			recEquals = false;
 			recOp = false;
+			leftPCount = 0;
+			rightPCount = 0;
 		}
 
 		private void Calculator_Load(object sender, EventArgs e) {
@@ -273,16 +277,29 @@ namespace WindowsFormsApplication {
 			if (recEquals) {
 				equationTextBox.Text = "(";
 			} else {
+				if (equationTextBox.Text != "" && !(equationTextBox.Text[equationTextBox.Text.Length-1] == '(' ||
+													equationTextBox.Text[equationTextBox.Text.Length-1] == '+' || 
+				                                    equationTextBox.Text[equationTextBox.Text.Length-1] == '-' ||
+				                                    equationTextBox.Text[equationTextBox.Text.Length-1] == '*' ||
+				                                    equationTextBox.Text[equationTextBox.Text.Length-1] == '/')) {
+					equationTextBox.Text += "*";
+				}
 				equationTextBox.Text += "(";
 			}
+
+			leftPCount++;
 			recEquals = false;
 			recOp = false;
 		}
 
 		private void rightPButton_MouseClick(object sender, MouseEventArgs e) {
-			equationTextBox.Text += ")";
-			recEquals = false;
-			recOp = false;
+			if (rightPCount < leftPCount) {
+				equationTextBox.Text += ")";
+
+				rightPCount++;
+				recEquals = false;
+				recOp = false;
+			}
 		}
 
 		private void squaredButton_MouseClick(object sender, MouseEventArgs e) {
@@ -340,6 +357,7 @@ namespace WindowsFormsApplication {
 				equationTextBox.Text += "Sqrt(";
 			}
 
+			leftPCount++;
 			recEquals = false;
 			recOp = false;
 		}
