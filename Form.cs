@@ -173,6 +173,10 @@ namespace WindowsFormsApplication {
 		private void equalsButton_Click(object sender, EventArgs e) {
 			
 			try {
+				for (int i=rightPCount; i < leftPCount; i++) {
+					equationTextBox.Text += ")";
+				}
+
 				NCalc.Expression exp = new NCalc.Expression(equationTextBox.Text);
 				var v = exp.Evaluate();
 
@@ -197,7 +201,7 @@ namespace WindowsFormsApplication {
 					equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
 
 					if (equationTextBox.Text != "") {
-						if (!System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/x]+")) {
+						if (!System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/*]+")) {
 	          				recOp = true;
      					} else {
      						recOp = false;
@@ -214,10 +218,12 @@ namespace WindowsFormsApplication {
 				if (recOp) {
 					equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
 				}
-				equationTextBox.Text += "+";
+				if (equationTextBox.Text[equationTextBox.Text.Length-1] != '(') {
+					equationTextBox.Text += "+";
+					recEquals = false;
+					recOp = true;
+				}
 			}
-			recEquals = false;
-			recOp = true;
 		}
 
 		private void subtractButton_MouseClick(object sender, MouseEventArgs e) {
@@ -277,13 +283,10 @@ namespace WindowsFormsApplication {
 			if (recEquals) {
 				equationTextBox.Text = "(";
 			} else {
-				if (equationTextBox.Text != "" && !(equationTextBox.Text[equationTextBox.Text.Length-1] == '(' ||
-													equationTextBox.Text[equationTextBox.Text.Length-1] == '+' || 
-				                                    equationTextBox.Text[equationTextBox.Text.Length-1] == '-' ||
-				                                    equationTextBox.Text[equationTextBox.Text.Length-1] == '*' ||
-				                                    equationTextBox.Text[equationTextBox.Text.Length-1] == '/')) {
+				if (equationTextBox.Text != "" && !System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/*(]+")) {
 					equationTextBox.Text += "*";
 				}
+
 				equationTextBox.Text += "(";
 			}
 
