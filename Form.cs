@@ -38,6 +38,25 @@ namespace WindowsFormsApplication {
 			recOp = false;
 		}
 
+		private void operation(string op) {
+			if (equationTextBox.Text == "" || equationTextBox.Text == "Undefined" || equationTextBox.Text == "Overflow") {
+				equationTextBox.Text = "0" + op;
+				recEquals = false;
+				recOp = true;
+			} else {
+				if (recOp) {
+					equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
+				}
+				if (equationTextBox.Text[equationTextBox.Text.Length-1] != '(') {
+					equationTextBox.Text += op;
+					recEquals = false;
+					recOp = true;
+				} else {
+					equationTextBox.Text += "0" + op;
+				}
+			}
+		}
+
 		private void Calculator_Load(object sender, EventArgs e) {
 
 		}
@@ -187,79 +206,19 @@ namespace WindowsFormsApplication {
 		}
 
 		private void additionButton_MouseClick(object sender, MouseEventArgs e) {
-			if (equationTextBox.Text == "" || equationTextBox.Text == "Undefined" || equationTextBox.Text == "Overflow") {
-				equationTextBox.Text = "0+";
-				recEquals = false;
-				recOp = true;
-			} else {
-				if (recOp) {
-					equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
-				}
-				if (equationTextBox.Text[equationTextBox.Text.Length-1] != '(') {
-					equationTextBox.Text += "+";
-					recEquals = false;
-					recOp = true;
-				} else {
-					equationTextBox.Text += "0+";
-				}
-			}
+			operation("+");
 		}
 
 		private void subtractButton_MouseClick(object sender, MouseEventArgs e) {
-			if (equationTextBox.Text == "" || equationTextBox.Text == "Undefined" || equationTextBox.Text == "Overflow") {
-				equationTextBox.Text = "0-";
-				recEquals = false;
-				recOp = true;
-			} else {
-				if (recOp) {
-					equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
-				}
-				if (equationTextBox.Text[equationTextBox.Text.Length-1] != '(') {
-					equationTextBox.Text += "-";
-					recEquals = false;
-					recOp = true;
-				} else {
-					equationTextBox.Text += "0-";
-				}
-			}
+			operation("-");
 		}
 
 		private void multiplyButton_MouseClick(object sender, MouseEventArgs e) {
-			if (equationTextBox.Text == "" || equationTextBox.Text == "Undefined" || equationTextBox.Text == "Overflow") {
-				equationTextBox.Text = "0*";
-				recEquals = false;
-				recOp = true;
-			} else {
-				if (recOp) {
-					equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
-				}
-				if (equationTextBox.Text[equationTextBox.Text.Length-1] != '(') {
-					equationTextBox.Text += "*";
-					recEquals = false;
-					recOp = true;
-				} else {
-					equationTextBox.Text += "0*";
-				}
-			}
+			operation("*");
 		}
 
 		private void divideButton_MouseClick(object sender, MouseEventArgs e) {
-			if (equationTextBox.Text == "" || equationTextBox.Text == "Undefined" || equationTextBox.Text == "Overflow") {
-				equationTextBox.Text = "0/";
-				recEquals = false;
-				recOp = true;
-			} else {
-				if (recOp) {
-					equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
-				}
-				if (equationTextBox.Text[equationTextBox.Text.Length-1] != '(') {
-					equationTextBox.Text += "/";
-					recEquals = false;
-					recOp = true;
-				} else {
-					equationTextBox.Text += "0/";
-				}
-			}
+			operation("/");
 		}
 
 		private void wolframButton_MouseClick(object sender, MouseEventArgs e) {
