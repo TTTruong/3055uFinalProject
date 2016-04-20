@@ -51,7 +51,6 @@
 			this.equationTextBox.SelectionAlignment = System.Windows.Forms.HorizontalAlignment.Right;
 			this.equationTextBox.SelectionChanged += new System.EventHandler(this.equationTextBox_SelectionChanged);
 			this.equationTextBox.TextChanged += new System.EventHandler(this.equationTextBox_TextChanged);
-			//this.equationTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
 			this.equationTextBox.ReadOnly = true;
 			this.equationTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.equationTextBox.Multiline = false;
