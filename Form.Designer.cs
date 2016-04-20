@@ -36,8 +36,6 @@
 			this.wolframButton = new System.Windows.Forms.Button();
 			this.leftPButton = new System.Windows.Forms.Button();
 			this.rightPButton = new System.Windows.Forms.Button();
-			this.squaredButton = new System.Windows.Forms.Button();
-			this.cubedButton = new System.Windows.Forms.Button();
 			this.factorialButton = new System.Windows.Forms.Button();
 			this.squareRootButton = new System.Windows.Forms.Button();
 			this.logButton = new System.Windows.Forms.Button();
@@ -62,7 +60,7 @@
 			// oneButton
 			this.oneButton.BackColor = System.Drawing.Color.Silver;
 			this.oneButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.oneButton.Location = new System.Drawing.Point(118, 204);
+			this.oneButton.Location = new System.Drawing.Point(117, 204);
 			this.oneButton.Name = "oneButton";
 			this.oneButton.Size = new System.Drawing.Size(40, 40);
 			this.oneButton.TabIndex = 2;
@@ -75,7 +73,7 @@
 			// twoButton
 			this.twoButton.BackColor = System.Drawing.Color.Silver;
 			this.twoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.twoButton.Location = new System.Drawing.Point(165, 204);
+			this.twoButton.Location = new System.Drawing.Point(163, 204);
 			this.twoButton.Name = "twoButton";
 			this.twoButton.Size = new System.Drawing.Size(40, 40);
 			this.twoButton.TabIndex = 3;
@@ -127,7 +125,7 @@
 			// sixButton
 			this.sixButton.BackColor = System.Drawing.Color.Silver;
 			this.sixButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.sixButton.Location = new System.Drawing.Point(210, 157);
+			this.sixButton.Location = new System.Drawing.Point(209, 157);
 			this.sixButton.Name = "sixButton";
 			this.sixButton.Size = new System.Drawing.Size(40, 40);
 			this.sixButton.TabIndex = 7;
@@ -153,7 +151,7 @@
 			// eightButton
 			this.eightButton.BackColor = System.Drawing.Color.Silver;
 			this.eightButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.eightButton.Location = new System.Drawing.Point(163, 110);
+			this.eightButton.Location = new System.Drawing.Point(163, 111);
 			this.eightButton.Name = "eightButton";
 			this.eightButton.Size = new System.Drawing.Size(40, 40);
 			this.eightButton.TabIndex = 9;
@@ -179,9 +177,9 @@
 			// zeroButton
 			this.zeroButton.BackColor = System.Drawing.Color.Silver;
 			this.zeroButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.zeroButton.Location = new System.Drawing.Point(118, 250);
+			this.zeroButton.Location = new System.Drawing.Point(117, 250);
 			this.zeroButton.Name = "zeroButton";
-			this.zeroButton.Size = new System.Drawing.Size(85, 40);
+			this.zeroButton.Size = new System.Drawing.Size(87, 40);
 			this.zeroButton.TabIndex = 11;
 			this.zeroButton.Text = "0";
 			this.zeroButton.UseVisualStyleBackColor = true;
@@ -231,7 +229,7 @@
 			// multiplyButton
 			this.multiplyButton.BackColor = System.Drawing.Color.Silver;
 			this.multiplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.multiplyButton.Location = new System.Drawing.Point(165, 64);
+			this.multiplyButton.Location = new System.Drawing.Point(163, 65);
 			this.multiplyButton.Name = "multiplyButton";
 			this.multiplyButton.Size = new System.Drawing.Size(40, 40);
 			this.multiplyButton.TabIndex = 16;
@@ -244,7 +242,7 @@
 			// divideButton
 			this.divideButton.BackColor = System.Drawing.Color.Silver;
 			this.divideButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.divideButton.Location = new System.Drawing.Point(210, 65);
+			this.divideButton.Location = new System.Drawing.Point(209, 65);
 			this.divideButton.Name = "divideButton";
 			this.divideButton.Size = new System.Drawing.Size(40, 40);
 			this.divideButton.TabIndex = 17;
@@ -257,7 +255,7 @@
 			// clearButton
 			this.clearButton.BackColor = System.Drawing.Color.Silver;
 			this.clearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.clearButton.Location = new System.Drawing.Point(118, 64);
+			this.clearButton.Location = new System.Drawing.Point(117, 65);
 			this.clearButton.Name = "clearButton";
 			this.clearButton.Size = new System.Drawing.Size(40, 40);
 			this.clearButton.TabIndex = 18;
@@ -283,7 +281,7 @@
 			// equalsButton
 			this.equalsButton.BackColor = System.Drawing.Color.Silver;
 			this.equalsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.equalsButton.Location = new System.Drawing.Point(255, 203);
+			this.equalsButton.Location = new System.Drawing.Point(255, 204);
 			this.equalsButton.Name = "equalsButton";
 			this.equalsButton.Size = new System.Drawing.Size(40, 85);
 			this.equalsButton.TabIndex = 20;
@@ -297,7 +295,7 @@
 			this.wolframButton.BackColor = System.Drawing.Color.Silver;
 			this.wolframButton.Location = new System.Drawing.Point(12, 65);
 			this.wolframButton.Name = "wolframButton";
-			this.wolframButton.Size = new System.Drawing.Size(85, 39);
+			this.wolframButton.Size = new System.Drawing.Size(85, 40);
 			this.wolframButton.TabIndex = 21;
 			this.wolframButton.Text = "Wolfram Alpha";
 			this.wolframButton.UseVisualStyleBackColor = true;
@@ -307,7 +305,7 @@
 			
 			// leftPButton
 			this.leftPButton.BackColor = System.Drawing.Color.Silver;
-			this.leftPButton.Location = new System.Drawing.Point(12, 110);
+			this.leftPButton.Location = new System.Drawing.Point(12, 158);
 			this.leftPButton.Name = "leftPButton";
 			this.leftPButton.Size = new System.Drawing.Size(40, 40);
 			this.leftPButton.TabIndex = 22;
@@ -319,7 +317,7 @@
 			
 			// rightPButton
 			this.rightPButton.BackColor = System.Drawing.Color.Silver;
-			this.rightPButton.Location = new System.Drawing.Point(57, 111);
+			this.rightPButton.Location = new System.Drawing.Point(57, 157);
 			this.rightPButton.Name = "rightPButton";
 			this.rightPButton.Size = new System.Drawing.Size(40, 40);
 			this.rightPButton.TabIndex = 23;
@@ -328,31 +326,7 @@
 			this.rightPButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.rightPButton_MouseClick);
 			this.rightPButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.rightPButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
-			
-			// squaredButton
-			this.squaredButton.BackColor = System.Drawing.Color.Silver;
-			this.squaredButton.Location = new System.Drawing.Point(12, 156);
-			this.squaredButton.Name = "squaredButton";
-			this.squaredButton.Size = new System.Drawing.Size(40, 40);
-			this.squaredButton.TabIndex = 24;
-			this.squaredButton.Text = "x^2";
-			this.squaredButton.UseVisualStyleBackColor = true;
-			this.squaredButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.squaredButton_MouseClick);
-			this.squaredButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
-			this.squaredButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
-			
-			// cubedButton
-			this.cubedButton.BackColor = System.Drawing.Color.Silver;
-			this.cubedButton.Location = new System.Drawing.Point(57, 156);
-			this.cubedButton.Name = "cubedButton";
-			this.cubedButton.Size = new System.Drawing.Size(40, 40);
-			this.cubedButton.TabIndex = 25;
-			this.cubedButton.Text = "x^3";
-			this.cubedButton.UseVisualStyleBackColor = true;
-			this.cubedButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cubedButton_MouseClick);
-			this.cubedButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
-			this.cubedButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
-			
+
 			// factorialButton
 			this.factorialButton.BackColor = System.Drawing.Color.Silver;
 			this.factorialButton.Location = new System.Drawing.Point(12, 251);
@@ -367,7 +341,7 @@
 			
 			// squareRootButton
 			this.squareRootButton.BackColor = System.Drawing.Color.Silver;
-			this.squareRootButton.Location = new System.Drawing.Point(58, 202);
+			this.squareRootButton.Location = new System.Drawing.Point(57, 204);
 			this.squareRootButton.Name = "squareRootButton";
 			this.squareRootButton.Size = new System.Drawing.Size(40, 40);
 			this.squareRootButton.TabIndex = 27;
@@ -391,7 +365,7 @@
 			
 			// powerButton
 			this.powerButton.BackColor = System.Drawing.Color.Silver;
-			this.powerButton.Location = new System.Drawing.Point(13, 202);
+			this.powerButton.Location = new System.Drawing.Point(12, 204);
 			this.powerButton.Name = "powerButton";
 			this.powerButton.Size = new System.Drawing.Size(40, 40);
 			this.powerButton.TabIndex = 29;
@@ -410,8 +384,6 @@
 			this.Controls.Add(this.logButton);
 			this.Controls.Add(this.squareRootButton);
 			this.Controls.Add(this.factorialButton);
-			this.Controls.Add(this.cubedButton);
-			this.Controls.Add(this.squaredButton);
 			this.Controls.Add(this.rightPButton);
 			this.Controls.Add(this.leftPButton);
 			this.Controls.Add(this.wolframButton);
@@ -466,8 +438,6 @@
 		private System.Windows.Forms.Button wolframButton;
 		private System.Windows.Forms.Button leftPButton;
 		private System.Windows.Forms.Button rightPButton;
-		private System.Windows.Forms.Button squaredButton;
-		private System.Windows.Forms.Button cubedButton;
 		private System.Windows.Forms.Button factorialButton;
 		private System.Windows.Forms.Button squareRootButton;
 		private System.Windows.Forms.Button logButton;
