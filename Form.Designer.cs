@@ -36,10 +36,10 @@
 			this.wolframButton = new System.Windows.Forms.Button();
 			this.leftPButton = new System.Windows.Forms.Button();
 			this.rightPButton = new System.Windows.Forms.Button();
-			this.factorialButton = new System.Windows.Forms.Button();
 			this.squareRootButton = new System.Windows.Forms.Button();
 			this.logButton = new System.Windows.Forms.Button();
-			this.powerButton = new System.Windows.Forms.Button();
+			this.piButton = new System.Windows.Forms.Button();
+			this.eulerButton = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 
 			// equationTextBox
@@ -327,21 +327,9 @@
 			this.rightPButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.rightPButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 
-			// factorialButton
-			this.factorialButton.BackColor = System.Drawing.Color.Silver;
-			this.factorialButton.Location = new System.Drawing.Point(12, 251);
-			this.factorialButton.Name = "factorialButton";
-			this.factorialButton.Size = new System.Drawing.Size(40, 40);
-			this.factorialButton.TabIndex = 26;
-			this.factorialButton.Text = "n!";
-			this.factorialButton.UseVisualStyleBackColor = true;
-			this.factorialButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.factorialButton_MouseClick);
-			this.factorialButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
-			this.factorialButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
-			
 			// squareRootButton
 			this.squareRootButton.BackColor = System.Drawing.Color.Silver;
-			this.squareRootButton.Location = new System.Drawing.Point(57, 204);
+			this.squareRootButton.Location = new System.Drawing.Point(12, 251);
 			this.squareRootButton.Name = "squareRootButton";
 			this.squareRootButton.Size = new System.Drawing.Size(40, 40);
 			this.squareRootButton.TabIndex = 27;
@@ -363,27 +351,39 @@
 			this.logButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
 			this.logButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
-			// powerButton
-			this.powerButton.BackColor = System.Drawing.Color.Silver;
-			this.powerButton.Location = new System.Drawing.Point(12, 204);
-			this.powerButton.Name = "powerButton";
-			this.powerButton.Size = new System.Drawing.Size(40, 40);
-			this.powerButton.TabIndex = 29;
-			this.powerButton.Text = "x^y";
-			this.powerButton.UseVisualStyleBackColor = true;
-			this.powerButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.powerButton_MouseClick);
-			this.powerButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
-			this.powerButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
+			// piButton
+			this.piButton.BackColor = System.Drawing.Color.Silver;
+			this.piButton.Location = new System.Drawing.Point(12, 204);
+			this.piButton.Name = "piButton";
+			this.piButton.Size = new System.Drawing.Size(40, 40);
+			this.piButton.TabIndex = 29;
+			this.piButton.Text = "Pi";
+			this.piButton.UseVisualStyleBackColor = true;
+			this.piButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.piButton_MouseClick);
+			this.piButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.piButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
 			
+			// eulerButton
+			this.eulerButton.BackColor = System.Drawing.Color.Silver;
+			this.eulerButton.Location = new System.Drawing.Point(57, 204);
+			this.eulerButton.Name = "eulerButton";
+			this.eulerButton.Size = new System.Drawing.Size(40, 40);
+			this.eulerButton.TabIndex = 29;
+			this.eulerButton.Text = "e";
+			this.eulerButton.UseVisualStyleBackColor = true;
+			this.eulerButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.eulerButton_MouseClick);
+			this.eulerButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+			this.eulerButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
+
 			// Calculator
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.DimGray;
 			this.ClientSize = new System.Drawing.Size(305, 297);
-			this.Controls.Add(this.powerButton);
+			this.Controls.Add(this.eulerButton);
+			this.Controls.Add(this.piButton);
 			this.Controls.Add(this.logButton);
 			this.Controls.Add(this.squareRootButton);
-			this.Controls.Add(this.factorialButton);
 			this.Controls.Add(this.rightPButton);
 			this.Controls.Add(this.leftPButton);
 			this.Controls.Add(this.wolframButton);
@@ -438,9 +438,9 @@
 		private System.Windows.Forms.Button wolframButton;
 		private System.Windows.Forms.Button leftPButton;
 		private System.Windows.Forms.Button rightPButton;
-		private System.Windows.Forms.Button factorialButton;
 		private System.Windows.Forms.Button squareRootButton;
 		private System.Windows.Forms.Button logButton;
-		private System.Windows.Forms.Button powerButton;
+		private System.Windows.Forms.Button piButton;
+		private System.Windows.Forms.Button eulerButton;
 	}
 }

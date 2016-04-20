@@ -34,6 +34,9 @@ namespace WindowsFormsApplication {
 				equationTextBox.Text = "0";
 				recEquals = false;
 			} else {
+				if (equationTextBox.Text != "" && equationTextBox.Text[equationTextBox.Text.Length-1] == ')') {
+					equationTextBox.Text += "*";
+				}
 				equationTextBox.Text += "0";
 			}
 			recOp = false;
@@ -44,6 +47,9 @@ namespace WindowsFormsApplication {
 				equationTextBox.Text = "1";
 				recEquals = false;
 			} else {
+				if (equationTextBox.Text != "" && equationTextBox.Text[equationTextBox.Text.Length-1] == ')') {
+					equationTextBox.Text += "*";
+				}
 				equationTextBox.Text += "1";
 			}
 			recOp = false;
@@ -54,6 +60,9 @@ namespace WindowsFormsApplication {
 				equationTextBox.Text = "2";
 				recEquals = false;
 			} else {
+				if (equationTextBox.Text != "" && equationTextBox.Text[equationTextBox.Text.Length-1] == ')') {
+					equationTextBox.Text += "*";
+				}
 				equationTextBox.Text += "2";
 			}
 			recOp = false;
@@ -64,6 +73,9 @@ namespace WindowsFormsApplication {
 				equationTextBox.Text = "3";
 				recEquals = false;
 			} else {
+				if (equationTextBox.Text != "" && equationTextBox.Text[equationTextBox.Text.Length-1] == ')') {
+					equationTextBox.Text += "*";
+				}
 				equationTextBox.Text += "3";
 			}
 			recOp = false;
@@ -74,6 +86,9 @@ namespace WindowsFormsApplication {
 				equationTextBox.Text = "4";
 				recEquals = false;
 			} else {
+				if (equationTextBox.Text != "" && equationTextBox.Text[equationTextBox.Text.Length-1] == ')') {
+					equationTextBox.Text += "*";
+				}
 				equationTextBox.Text += "4";
 			}
 			recOp = false;
@@ -84,6 +99,9 @@ namespace WindowsFormsApplication {
 				equationTextBox.Text = "5";
 				recEquals = false;
 			} else {
+				if (equationTextBox.Text != "" && equationTextBox.Text[equationTextBox.Text.Length-1] == ')') {
+					equationTextBox.Text += "*";
+				}
 				equationTextBox.Text += "5";
 			}
 			recOp = false;
@@ -94,6 +112,9 @@ namespace WindowsFormsApplication {
 				equationTextBox.Text = "6";
 				recEquals = false;
 			} else {
+				if (equationTextBox.Text != "" && equationTextBox.Text[equationTextBox.Text.Length-1] == ')') {
+					equationTextBox.Text += "*";
+				}
 				equationTextBox.Text += "6";
 			}
 			recOp = false;
@@ -104,6 +125,9 @@ namespace WindowsFormsApplication {
 				equationTextBox.Text = "7";
 				recEquals = false;
 			} else {
+				if (equationTextBox.Text != "" && equationTextBox.Text[equationTextBox.Text.Length-1] == ')') {
+					equationTextBox.Text += "*";
+				}
 				equationTextBox.Text += "7";
 			}
 			recOp = false;
@@ -114,6 +138,9 @@ namespace WindowsFormsApplication {
 				equationTextBox.Text = "8";
 				recEquals = false;
 			} else {
+				if (equationTextBox.Text != "" && equationTextBox.Text[equationTextBox.Text.Length-1] == ')') {
+					equationTextBox.Text += "*";
+				}
 				equationTextBox.Text += "8";
 			}
 			recOp = false;
@@ -124,6 +151,9 @@ namespace WindowsFormsApplication {
 				equationTextBox.Text = "9";
 				recEquals = false;
 			} else {
+				if (equationTextBox.Text != "" && equationTextBox.Text[equationTextBox.Text.Length-1] == ')') {
+					equationTextBox.Text += "*";
+				}
 				equationTextBox.Text += "9";
 			}
 			recOp = false;
@@ -169,13 +199,6 @@ namespace WindowsFormsApplication {
 			equationTextBox.SelectionAlignment = System.Windows.Forms.HorizontalAlignment.Right;
 		}
 
-		/* Commented out for now.
-		private void textBox1_KeyPress(object sender, KeyPressEventArgs e) {
-     		if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), "[\\d+()\\-+x/.^\\b]+")) {
-          		e.Handled = true;
-     		}
-		}*/
-
 		private void clearButton_MouseClick(object sender, MouseEventArgs e) {
 			equationTextBox.Text = "";
 			recEquals = false;
@@ -188,7 +211,7 @@ namespace WindowsFormsApplication {
 			
 			try {
 				if (equationTextBox.Text != "") {
-					if (System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/*^(]+")) {
+					if (System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/*(]+")) {
 						equationTextBox.Text += "0";
 					}
 	
@@ -230,7 +253,7 @@ namespace WindowsFormsApplication {
 					equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
 
 					if (equationTextBox.Text != "") {
-						if (!System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/*^]+")) {
+						if (!System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/*]+")) {
 	          				recOp = true;
      					} else {
      						recOp = false;
@@ -334,7 +357,7 @@ namespace WindowsFormsApplication {
 			if (recEquals) {
 				equationTextBox.Text = "(";
 			} else {
-				if (equationTextBox.Text != "" && !System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/*^(]+")) {
+				if (equationTextBox.Text != "" && !System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/*(]+")) {
 					equationTextBox.Text += "*";
 				}
 
@@ -349,7 +372,7 @@ namespace WindowsFormsApplication {
 		private void rightPButton_MouseClick(object sender, MouseEventArgs e) {
 			if (equationTextBox.Text != "" && rightPCount < leftPCount) {
 
-				if (System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/*^(]+")) {
+				if (System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/*(]+")) {
 					equationTextBox.Text += "0";
 				}
 
@@ -361,32 +384,29 @@ namespace WindowsFormsApplication {
 			}
 		}
 
-		private void powerButton_MouseClick(object sender, MouseEventArgs e) {
-			if (equationTextBox.Text == "" || equationTextBox.Text == "Undefined" || equationTextBox.Text == "Overflow") {
-				equationTextBox.Text = "0^";
+		private void piButton_MouseClick(object sender, MouseEventArgs e) {
+			if (equationTextBox.Text == "" || recEquals) {
+				equationTextBox.Text = "(3.14159)";
 				recEquals = false;
-				recOp = true;
 			} else {
-				if (recOp) {
-					equationTextBox.Text = equationTextBox.Text.Remove(equationTextBox.Text.Length-1);
+				if (!(recOp || equationTextBox.Text[equationTextBox.Text.Length-1] == '(')) {
+					equationTextBox.Text += "*";
 				}
-				if (equationTextBox.Text[equationTextBox.Text.Length-1] != '(') {
-					equationTextBox.Text += "^";
-					recEquals = false;
-					recOp = true;
-				} else {
-					equationTextBox.Text += "0^";
-				}
+					equationTextBox.Text += "(3.14159)";
 			}
+			recOp = false;
 		}
 
-		private void factorialButton_MouseClick(object sender, MouseEventArgs e) {
-			if (equationTextBox.Text == "") {
-				equationTextBox.Text += "Fact(";
+		private void eulerButton_MouseClick(object sender, MouseEventArgs e) {
+			if (equationTextBox.Text == "" || recEquals) {
+				equationTextBox.Text = "(2.718)";
+				recEquals = false;
 			} else {
-				equationTextBox.Text += "Fact(";
+				if (!(recOp || equationTextBox.Text[equationTextBox.Text.Length-1] == '(')) {
+					equationTextBox.Text += "*";
+				}
+					equationTextBox.Text += "(2.718)";
 			}
-			recEquals = false;
 			recOp = false;
 		}
 
@@ -396,7 +416,7 @@ namespace WindowsFormsApplication {
 				if (equationTextBox.Text[equationTextBox.Text.Length-1] == '.') {
 					equationTextBox.Text += "0*Sqrt(";
 				} else {
-					if (System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/*^(]+")) {
+					if (System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/*(]+")) {
 						equationTextBox.Text += "Sqrt(";
 					} else {
 						equationTextBox.Text += "*Sqrt(";
@@ -416,7 +436,7 @@ namespace WindowsFormsApplication {
 				if (equationTextBox.Text[equationTextBox.Text.Length-1] == '.') {
 					equationTextBox.Text += "0*Log10(";
 				} else {
-					if (System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/*^(]+")) {
+					if (System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[equationTextBox.Text.Length-1].ToString(), "[+-/*(]+")) {
 						equationTextBox.Text += "Log10(";
 					} else {
 						equationTextBox.Text += "*Log10(";
