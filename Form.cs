@@ -137,7 +137,22 @@ namespace WindowsFormsApplication {
 				if (equationTextBox.Text == "" || equationTextBox.Text[equationTextBox.Text.Length-1] == '(') {
 					equationTextBox.Text += "0.";
 				} else {
-					if (equationTextBox.Text[equationTextBox.Text.Length-1] != '.') {
+
+					int prevCounter = equationTextBox.Text.Length-1;
+					bool validDec = true;
+
+					while (prevCounter >= 0) {
+						if (System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[prevCounter].ToString(), "[.]+")) {
+							validDec = false;
+							break;
+						} else if (!System.Text.RegularExpressions.Regex.IsMatch(equationTextBox.Text[prevCounter].ToString(), "[0123456789]+")) {
+							break;
+						}
+
+						prevCounter--;
+					}
+
+					if (validDec) {
 						equationTextBox.Text += ".";
 					}
 				}
