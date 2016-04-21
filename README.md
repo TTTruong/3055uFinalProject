@@ -40,6 +40,8 @@ Easily creating a simple GUI for a desktop application which has working graphic
     <li>String Interpolation
         <ul><li>Allows to directly mention variables in a string expression without a place holder.</li></ul></li>
     <li>Implicitly Typed Variables
-        <ul><li>Allows the compiler to infer a type for a variable from an expression.</li></ul></li></ul>
+        <ul><li>Allows the compiler to infer a type for a variable from an expression.</li></ul></li>
+    <li>Auto-Property Initializers
+        <ul><li>Allows for local variables to be automatically initialized.</li></ul></li></ul>
 
 <h3><b>Course Relating</b></h3>
