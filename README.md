@@ -45,3 +45,9 @@ Easily creating a simple GUI for a desktop application which has working graphic
         <ul><li>Allows for local variables to be automatically initialized.</li></ul></li></ul>
 
 <h3><b>Course Relating</b></h3>
+<ul><li>Type System
+        <ul><li>Common type system that supports classes, structures, enumerations, interfaces, and delegates.</li></ul></li>
+    <li>Type Inference
+        <ul><li>Supports type inferencing with implicitly typed variables.</li></ul></li>
+    <li>Lexical Scoping
+        <ul><li>C# is a lexically scoped language.</li><ul></li></ul>
