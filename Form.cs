@@ -139,7 +139,7 @@ namespace WindowsFormsApplication {
 				equationTextBox.Text = "0.";
 				recEquals = false;
 			} else {
-				if (equationTextBox.Text == "" || equationTextBox.Text[equationTextBox.Text.Length-1] == '(') {
+				if (recOp || equationTextBox.Text == "" || equationTextBox.Text[equationTextBox.Text.Length-1] == '(') {
 					equationTextBox.Text += "0.";
 				} else {
 
@@ -205,6 +205,7 @@ namespace WindowsFormsApplication {
 					}
 				}
 			} catch (Exception except) {
+				Console.Write("Error: " + except.GetType() + "\n");
 				equationTextBox.Text = "Overflow";
 			}
 
