@@ -37,6 +37,7 @@ namespace WindowsFormsApplication {
 		private void operation(string op) {
 			if (equationTextBox.Text == "" || equationTextBox.Text == "Undefined" || equationTextBox.Text == "Overflow") {
 				equationTextBox.Text = "0" + op;
+				//equationTextBox.Text = "0{op}";
 				recEquals = false;
 				recOp = true;
 			} else {
@@ -51,6 +52,7 @@ namespace WindowsFormsApplication {
 					recOp = true;
 				} else {
 					equationTextBox.Text += "0" + op;
+					//equationTextBox.Text += "0{op}";
 					recEquals = false;
 					recOp = true;
 				}
@@ -59,13 +61,15 @@ namespace WindowsFormsApplication {
 
 		private void specConstant(string constant) {
 			if (equationTextBox.Text == "" || recEquals) {
-				equationTextBox.Text = "({constant})";
+				equationTextBox.Text = "(" + constant + ")";
+				//equationTextBox.Text = "({constant})";
 				recEquals = false;
 			} else {
 				if (!(recOp || equationTextBox.Text[equationTextBox.Text.Length-1] == '(')) {
 					equationTextBox.Text += "*";
 				}
-					equationTextBox.Text += "({constant})";
+					equationTextBox.Text += "(" + constant + ")";
+					//equationTextBox.Text += "({constant})";
 			}
 			recOp = false;
 		}
@@ -73,12 +77,14 @@ namespace WindowsFormsApplication {
 		private void specOperator(string specOp) {
 			if (equationTextBox.Text != "") {
 				if (equationTextBox.Text[equationTextBox.Text.Length-1] == '.') {
-					equationTextBox.Text += "0*{specOp}";
+					equationTextBox.Text += "0*" + specOp;
+					//equationTextBox.Text += "0*{specOp}";
 				} else {
 					if (recOp || equationTextBox.Text[equationTextBox.Text.Length-1] == '(') {
 						equationTextBox.Text += specOp;
 					} else {
-						equationTextBox.Text += "*{specOp}";
+						equationTextBox.Text += "*" + specOp;
+						//equationTextBox.Text += "*{specOp}";
 					}
 				}
 			} else {
