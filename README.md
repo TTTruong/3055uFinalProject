@@ -23,7 +23,7 @@ Easily creating a simple GUI for a desktop application which has working graphic
 <ul><li>Microsoft Visual Studio
         <ul><li>C# IDE that provides a drag and drop WinForms designer.</li></ul></li>
     <li>Mono
-        <ul><li>C# compiler and common language runtime. Was used to compile source code on Linux.</li></ul>
+        <ul><li>C# compiler and common language runtime. Was used to compile source code on Linux.</li></ul></li>
     <li>NCalc
         <ul><li>Was used to evaluate mathematical expressions that were in string form. </li></ul></li></ul>
 
