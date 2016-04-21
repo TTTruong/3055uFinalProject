@@ -28,7 +28,11 @@ Easily creating a simple GUI for a desktop application which has working graphic
         <ul><li>Used to evaluate mathematical expressions that were in string form. </li></ul></li>
     <li>WinForms from .NET Framework
         <ul><li>Used as the base for the GUI. Contains all the GUI components.</li></ul></li>
-        <li>Makefile
+    <li>System.Drawing Namespace
+        <ul><li>Provided access to GDI+ basic graphics functionality.</li></ul></li>
+    <li>System.Data Namespace
+        <ul><li>Allows to build components that efficiently manage data from multiple data sources.</li></ul></li>
+    <li>Makefile
         <ul><li>Used to compile and run the code with all the required flags and commands.</li></ul></li></ul>
 
 <h3><b>Language Features</b></h3>
