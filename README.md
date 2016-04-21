@@ -37,7 +37,7 @@ Easily creating a simple GUI for a desktop application which has working graphic
 <h3><b>Language Features Used</b></h3>
 <ul><li><b>Using Static Classes</b>
         <ul><li>Allows to use namespaces before each call. Reduces duplication and makes the code easier to read.</li></ul></li>
-    <li><b>String Interpolation</b>
+    <li><b>String Interpolation</b> <i>(Partially used)</i>
         <ul><li>Allows to directly mention variables in a string expression without a place holder.</li></ul></li>
     <li><b>Implicitly Typed Variables</b>
         <ul><li>Allows the compiler to infer a type for a variable from an expression.</li></ul></li>
