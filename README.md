@@ -25,7 +25,7 @@ Easily creating a simple GUI for a desktop application which has working graphic
     <li>Mono
         <ul><li>C# compiler and common language runtime. Was used to compile source code on Linux.</li></ul>
     <li>NCalc
-        <ul><li>Was used to evaluate mathematical expressions that were in string form. </li></ul></li></li></ul>
+        <ul><li>Was used to evaluate mathematical expressions that were in string form. </li></ul></li></ul>
 
 <h3><b>Language Features</b></h3>
 
