@@ -19,7 +19,6 @@ Easily creating a simple GUI for a desktop application which has working graphic
         <ul><li>using PyQt</li></ul></li></ul>
 
 <h3><b>Build Tools</b></h3>
-
 <ul><li>Microsoft Visual Studio
         <ul><li>C# IDE that provides a drag and drop WinForms designer.</li></ul></li>
     <li>Mono
@@ -35,6 +34,12 @@ Easily creating a simple GUI for a desktop application which has working graphic
     <li>Makefile
         <ul><li>Used to compile and run the code with all the required flags and commands.</li></ul></li></ul>
 
-<h3><b>Language Features</b></h3>
+<h3><b>Language Features Used</b></h3>
+<ul><li>Using Static Classes
+        <ul><li>Allows to use namespaces before each call. Reduces duplication and makes the code easier to read.</li></ul></li>
+    <li>String Interpolation
+        <ul><li>Allows to directly mention variables in a string expression without a place holder.</li></ul></li>
+    <li>Implicitly Typed Variables
+        <ul><li>Allows the compiler to infer a type for a variable from an expression.</li></ul></li></ul>
 
 <h3><b>Course Relating</b></h3>
