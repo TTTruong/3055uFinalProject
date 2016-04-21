@@ -2,7 +2,7 @@
 
 <h3><b>Problem Statement</b></h3>
 
-
+Creating a simple GUI for a desktop application which has working graphical user interface components.
 
 <h3><b>Programming Language</b></h3>
 <ul><li>C# using WinForms from .NET Framework</li></ul>
