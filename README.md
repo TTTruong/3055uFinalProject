@@ -3,10 +3,16 @@
 <h3><b>Problem Statement</b></h3>
 
 
+
 <h3><b>Programming Language</b></h3>
-<ul><li>C#</li></ul>
+<ul><li>C# using WinForms from .NET Framework</li></ul>
 
 <h3><b>Alternatives</b></h3>
+<ul><li>C using XForms GUI Toolkit</li>
+    <li>C++ using Qt Framework</li>
+    <li> Java using Swing</li>
+    <li>Java using Abstract Window Toolkit (AWT)</li>
+    <li>Python using PyQt</li></ul>
 
 <h3><b>Build Tools</b></h3>
 
